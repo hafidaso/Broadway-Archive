@@ -269,11 +269,6 @@
         "tip2": "Click on any conductor card to filter the Orchestral Wave visualization to their career.",
         "tip3": "Each card displays insights such as 'Top Recorded', 'Historical Pioneer', or 'Longest Span'."
       },
-      "interactions": {
-        "title": "Interactive Features",
-        "tip1": "On desktop, experience the animated baton cursor that follows your mouse movement, creating an immersive conducting experience.",
-        "tip2": "The baton animation in the Hero section responds to scroll progress, rotating and glowing as you explore the story."
-      },
       "timeline": {
         "title": "Chronological Timeline",
         "tip1": "Search by conductor name or show title using the search bar at the top.",

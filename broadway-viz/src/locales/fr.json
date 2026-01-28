@@ -269,11 +269,6 @@
         "tip2": "Cliquez sur n'importe quelle carte de cheffe d'orchestre pour filtrer la visualisation Orchestral Wave à sa carrière.",
         "tip3": "Chaque carte affiche des informations telles que 'Top Recorded', 'Historical Pioneer' ou 'Longest Span'."
       },
-      "interactions": {
-        "title": "Fonctionnalités interactives",
-        "tip1": "Sur ordinateur, découvrez le curseur de baguette animé qui suit le mouvement de votre souris, créant une expérience immersive de direction.",
-        "tip2": "L'animation de la baguette dans la section Hero répond à la progression du défilement, tournant et brillant pendant que vous explorez l'histoire."
-      },
       "timeline": {
         "title": "Chronologie",
         "tip1": "Recherchez par nom de cheffe d'orchestre ou titre de spectacle à l'aide de la barre de recherche en haut.",

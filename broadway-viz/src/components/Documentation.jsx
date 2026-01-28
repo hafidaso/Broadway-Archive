@@ -297,25 +297,7 @@ const Documentation = () => {
               </ul>
             </div>
 
-            {/* Interactive Features */}
-            <div className="bg-gradient-to-br from-gray-900/60 to-black/60 border border-yellow-500/20 rounded-2xl p-4 sm:p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <MousePointerClick className="w-6 h-6 text-yellow-500" strokeWidth={1.5} />
-                <h3 className="text-xl sm:text-2xl font-serif text-yellow-400">
-                  {t('documentation.howToUse.interactions.title')}
-                </h3>
-              </div>
-              <ul className="space-y-3 text-gray-300 text-sm sm:text-base">
-                <li className="flex items-start gap-3">
-                  <span className="text-yellow-500 mt-1">•</span>
-                  <span>{t('documentation.howToUse.interactions.tip1')}</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-yellow-500 mt-1">•</span>
-                  <span>{t('documentation.howToUse.interactions.tip2')}</span>
-                </li>
-              </ul>
-            </div>
+            {/* (Removed Interactive Features block – animated baton cursor not present in UI) */}
 
             {/* Timeline View */}
             <div className="bg-gradient-to-br from-gray-900/60 to-black/60 border border-yellow-500/20 rounded-2xl p-4 sm:p-6">
