@@ -111,7 +111,7 @@ const Highlights = ({ onConductorSelect }) => {
         }
         return 0;
       })
-      .slice(0, 5) // Show top 5
+      .slice(0, 6) // Show top 6
       .map((conductor, index) => ({
         name: conductor.name,
         role: conductor.role,
