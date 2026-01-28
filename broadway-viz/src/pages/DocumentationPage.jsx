@@ -51,7 +51,21 @@ const DocumentationPage = () => {
       <Documentation />
 
       {/* Footer */}
-      <footer className="py-8 sm:py-20 md:py-24 text-center border-t border-yellow-500/20 bg-black relative overflow-hidden mt-20 sm:mt-24 md:mt-32" role="contentinfo">
+      <footer
+        className="py-8 sm:py-20 md:py-24 text-center border-t border-yellow-500/20 bg-black relative overflow-hidden mt-20 sm:mt-24 md:mt-32"
+        role="contentinfo"
+        style={{
+          backgroundImage: 'url("/background-music.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Subtle dark overlay to keep text readable while preserving image richness */}
+        <div
+          className="absolute inset-0 bg-black/65 sm:bg-black/60 md:bg-black/55 pointer-events-none"
+          aria-hidden="true"
+        />
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 md:px-12 lg:px-20 xl:px-24">
             <div className="flex flex-col items-center gap-6 sm:gap-7">
             <div className="flex flex-col items-center gap-3 sm:gap-4">

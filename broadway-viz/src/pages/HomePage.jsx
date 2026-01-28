@@ -479,7 +479,7 @@ function HomePage() {
       >
         {/* Subtle dark overlay to keep text readable while preserving image richness */}
         <div
-          className="absolute inset-0 bg-black/55 sm:bg-black/50 md:bg-black/45 pointer-events-none"
+          className="absolute inset-0 bg-black/65 sm:bg-black/60 md:bg-black/55 pointer-events-none"
           aria-hidden="true"
         />
 
