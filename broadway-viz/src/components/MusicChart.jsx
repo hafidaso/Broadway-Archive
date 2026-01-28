@@ -1013,10 +1013,11 @@ const MusicChart = ({
           </div>
 
           <motion.div 
-            className="bg-black/30 rounded-lg p-2 sm:p-4 border border-gray-700/60 overflow-visible relative"
+            className="bg-black/30 rounded-lg p-2 sm:p-4 border border-gray-700/60 overflow-visible relative cursor-pointer"
             ref={chartRef}
             animate={{ scale: isZoomed ? 1.05 : 1 }}
             transition={{ duration: 0.3 }}
+            onDoubleClick={() => setIsZoomed(prev => !prev)}
           >
             <div className="hidden md:flex flex-col gap-1.5 absolute left-3 bottom-4 text-gray-200 text-[10px] border border-gray-700/70 rounded px-2 py-1.5 bg-black/60">
               <span className="text-[9px] uppercase tracking-wider text-gray-100 font-semibold">Circle size</span>
