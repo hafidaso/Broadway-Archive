@@ -92,6 +92,18 @@ const DocumentationPage = () => {
             </div>
 
             <div className="text-gray-100 text-xs sm:text-sm md:text-base flex flex-col items-center gap-4">
+              <div className="flex items-center justify-center gap-6 sm:gap-8">
+                <a
+                  href="https://www.linkedin.com/in/hafida-belayd/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-10 h-10 rounded-full border border-yellow-500/30 text-yellow-300 flex items-center justify-center hover:border-yellow-500 hover:text-yellow-200 transition-all"
+                  aria-label="LinkedIn"
+                  title="LinkedIn"
+                >
+                  <span className="text-[11px] font-semibold tracking-wide">in</span>
+                </a>
+              </div>
               <p className="text-gray-100 text-xs sm:text-sm italic text-center">
                 {t('footer.licenseNote')}
               </p>

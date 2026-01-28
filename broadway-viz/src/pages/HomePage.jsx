@@ -521,6 +521,16 @@ function HomePage() {
                   <span className="text-[11px] font-semibold tracking-wide">GH</span>
                 </a>
                 <a
+                  href="https://www.linkedin.com/in/hafida-belayd/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-10 h-10 rounded-full border border-yellow-500/30 text-yellow-300 flex items-center justify-center hover:border-yellow-500 hover:text-yellow-200 transition-all"
+                  aria-label="LinkedIn"
+                  title="LinkedIn"
+                >
+                  <span className="text-[11px] font-semibold tracking-wide">in</span>
+                </a>
+                <a
                   href="mailto:hafidabelaidagnaoui@gmail.com"
                   className="w-10 h-10 rounded-full border border-yellow-500/30 text-yellow-300 flex items-center justify-center hover:border-yellow-500 hover:text-yellow-200 transition-all"
                   aria-label="Email"
