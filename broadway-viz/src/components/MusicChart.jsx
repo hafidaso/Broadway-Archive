@@ -408,15 +408,29 @@ const MusicChart = ({ selectedConductor: propSelectedConductor = 'all', setSelec
 
   const filteredLeftOptions = useMemo(() => {
     const query = compareLeftQuery.trim().toLowerCase();
-    if (!query) return conductorOptions;
-    return conductorOptions.filter(name => name.toLowerCase().includes(query));
-  }, [conductorOptions, compareLeftQuery]);
+    const baseOptions = compareRight
+      ? conductorOptions.filter(name => name !== compareRight)
+      : conductorOptions;
+    if (!query) return baseOptions;
+    return baseOptions.filter(name => name.toLowerCase().includes(query));
+  }, [conductorOptions, compareLeftQuery, compareRight]);
 
   const filteredRightOptions = useMemo(() => {
     const query = compareRightQuery.trim().toLowerCase();
-    if (!query) return conductorOptions;
-    return conductorOptions.filter(name => name.toLowerCase().includes(query));
-  }, [conductorOptions, compareRightQuery]);
+    const baseOptions = compareLeft
+      ? conductorOptions.filter(name => name !== compareLeft)
+      : conductorOptions;
+    if (!query) return baseOptions;
+    return baseOptions.filter(name => name.toLowerCase().includes(query));
+  }, [conductorOptions, compareRightQuery, compareLeft]);
+
+  // Prevent comparing the same person on both sides
+  useEffect(() => {
+    if (compareLeft && compareRight && compareLeft === compareRight) {
+      setCompareRight('');
+      setCompareRightQuery('');
+    }
+  }, [compareLeft, compareRight]);
 
   const conductorStats = useMemo(() => {
     const statsMap = new Map();
