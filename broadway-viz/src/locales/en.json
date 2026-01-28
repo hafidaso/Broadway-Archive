@@ -386,6 +386,9 @@
   "language": {
     "label": "Language"
   },
+  "loader": {
+    "preparing": "Preparing the Score..."
+  },
   "moreCharts": {
     "byDecade": "By Decade",
     "byRole": "By Role"

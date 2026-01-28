@@ -361,7 +361,7 @@
       },
       "designPhilosophy": {
         "title": "Philosophie de design : l’or de Broadway et la Data Baton",
-        "paragraph1": "Le langage visuel de l’archive est volontairement épuré : une palette restreinte d’or de Broadway (#D4AF37) sur un noir de théâtre profond. L’or n’est pas un ornement gratuit ; il est réservé aux éléments structurels axes, rôles, jalons et points d’ancrage de navigation — afin que l’œil apprenne à le lire comme un signal de hiérarchie et d’emphase.",
+        "paragraph1": "Le langage visuel de l’archive est volontairement épuré : une palette restreinte d’or de Broadway (#D4AF37) sur un noir de théâtre profond. L’or n’est pas un ornement gratuit ; il est réservé aux éléments structurels axes, rôles, jalons et points d’ancrage de navigation afin que l’œil apprenne à le lire comme un signal de hiérarchie et d’emphase.",
         "paragraph2": "Le logo Data Baton se situe à l’intersection de l’analyse et de la performance. C’est l’outil de la cheffe d’orchestre, transformé en glyphe de données : un rappel que chaque marque à l’écran correspond à une carrière Women+ documentée, et que chaque interaction est une manière de lire une partition historique. Le logo apparaît dans la navigation, en favicon et dans les aperçus sociaux, de sorte que l’archive reste reconnaissable même lorsqu’elle est détachée de son interface complète.",
         "paragraph3": "La typographie suit le même principe. Une police à empattement porte les éléments narratifs  titres de sections, citations et phrases de cadrage tandis qu’une sans-serif sobre porte les libellés, les nombres et les contrôles. Le résultat est un contrat discret entre récit et structure : l’interface demeure théâtrale, mais les données n’ont jamais à rivaliser avec la mise en scène."
       }
@@ -385,6 +385,9 @@
   },
   "language": {
     "label": "Langue"
+  },
+  "loader": {
+    "preparing": "Préparation de la partition..."
   },
   "moreCharts": {
     "byDecade": "Par décennie",

@@ -12,6 +12,7 @@ import Highlights from '../components/Highlights';
 import DataTable from '../components/DataTable';
 import OrchestralChart from '../components/OrchestralChart';
 import GlobalParallaxBg from '../components/GlobalParallaxBg';
+import VinylLoader from '../components/VinylLoader';
 import data from '../assets/data/cleaned_data.json';
 
 function HomePage() {
@@ -20,6 +21,7 @@ function HomePage() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [activeView, setActiveView] = useState('chart');
   const [selectedConductor, setSelectedConductor] = useState('all');
+  const [isLoading, setIsLoading] = useState(true);
   
   const storyTimelineRef = useRef(null);
 
@@ -160,6 +162,18 @@ function HomePage() {
     URL.revokeObjectURL(url);
   };
 
+  // Handle data loading - show loader until data is ready
+  useEffect(() => {
+    // Check if data is loaded (385 records)
+    if (data && data.length === 385) {
+      // Small delay to ensure all processing is complete
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 800);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   // Mark pioneers: earliest opening date per role
   useMemo(() => {
     const roleToEarliest = new Map();
@@ -280,6 +294,11 @@ function HomePage() {
 
     return { milestone: randomMilestone, marqueeTint: randomTint };
   }, [t]);
+
+  // Show loader while data is being processed
+  if (isLoading) {
+    return <VinylLoader />;
+  }
 
   return (
     <div className="App bg-black min-h-screen relative">

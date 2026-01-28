@@ -404,12 +404,33 @@ a,
   text-transform: uppercase;
 }
 
+@keyframes vinyl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes ticker-scroll {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* Vinyl Loader Animation */
+.vinyl-spin {
+  animation: vinyl-rotate 8s linear infinite;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vinyl-spin {
+    animation: vinyl-rotate 12s linear infinite;
   }
 }
 
