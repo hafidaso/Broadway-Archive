@@ -229,7 +229,7 @@
       "methodology": "Methodology"
     },
     "overview": {
-      "paragraph1": "This interactive visualization celebrates the contributions of Women+ conductors on Broadway from 1915 to the present day. Through multiple interactive views—including the Orchestral Wave visualization, chronological timeline, and searchable data table we bring to light the stories of 385 productions and the 103 talented conductors who led them.",
+      "paragraph1": "This interactive visualization celebrates the contributions of Women+ conductors on Broadway from 1915 to the present day. Through multiple interactive views including the Orchestral Wave visualization, chronological timeline, and searchable data table we bring to light the stories of 385 productions and the 103 talented conductors who led them.",
       "paragraph2": "Our mission is to make visible the often-overlooked history of Women+ musical leadership on Broadway, providing transparency about the data sources, methodology, and tools used to create this visualization.",
       "stats": {
         "productions": "Productions",
@@ -361,9 +361,9 @@
       },
       "designPhilosophy": {
         "title": "Design Philosophy: Broadway Gold and the Data Baton",
-        "paragraph1": "The visual language of the archive is intentionally spare: a narrow palette of Broadway gold (#D4AF37) against deep theatre black. Gold is not used as a decorative flourish; it is reserved for structural elements axes, roles, milestones, and navigation anchors—so that the eye learns to treat it as a signal of hierarchy and emphasis.",
+        "paragraph1": "The visual language of the archive is intentionally spare: a narrow palette of Broadway gold (#D4AF37) against deep theatre black. Gold is not used as a decorative flourish; it is reserved for structural elements axes, roles, milestones, and navigation anchors so that the eye learns to treat it as a signal of hierarchy and emphasis.",
         "paragraph2": "The Data Baton logo sits at the intersection of analysis and performance. It is a conductor’s tool rendered as a data glyph: a reminder that every mark on the screen corresponds to a documented Women+ career, and that every interaction is a form of reading an historical score. The logo appears in the navigation, the favicon, and social previews so that the archive is recognizable even when detached from its full interface.",
-        "paragraph3": "Typography follows the same principle. A serif face carries the narrative elements section titles, quotes, and framing sentences—while a clean sans-serif carries labels, counts, and controls. The result is a quiet contract between story and structure: the interface remains theatrical, but the data never has to compete with the staging."
+        "paragraph3": "Typography follows the same principle. A serif face carries the narrative elements section titles, quotes, and framing sentences while a clean sans-serif carries labels, counts, and controls. The result is a quiet contract between story and structure: the interface remains theatrical, but the data never has to compete with the staging."
       }
     },
     "exploreButton": "Explore the Visualizations",
