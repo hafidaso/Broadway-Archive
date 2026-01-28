@@ -21,6 +21,7 @@ function HomePage() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [activeView, setActiveView] = useState('chart');
   const [selectedConductor, setSelectedConductor] = useState('all');
+  const [selectedRole, setSelectedRole] = useState('all');
   const [isLoading, setIsLoading] = useState(true);
   
   const storyTimelineRef = useRef(null);
@@ -382,7 +383,16 @@ function HomePage() {
         
         {/* Stats Section */}
         <section id="stats">
-          <Stats />
+          <Stats
+            onRoleSelect={(role) => {
+              const nextRole = role || 'all';
+              setSelectedRole(nextRole);
+              setActiveView('chart');
+              setTimeout(() => {
+                document.getElementById('explore')?.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }}
+          />
         </section>
         
         {/* Explore Section */}
@@ -452,6 +462,8 @@ function HomePage() {
                 <MusicChart 
                   selectedConductor={selectedConductor}
                   setSelectedConductor={setSelectedConductor}
+                  selectedRole={selectedRole}
+                  setSelectedRole={setSelectedRole}
                 />
               )}
               {activeView === 'orchestral' && (

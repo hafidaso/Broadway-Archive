@@ -34,7 +34,7 @@ const CountUpNumber = ({ value, duration = 1.2 }) => {
   return <span>{displayValue.toLocaleString()}</span>;
 };
 
-const Stats = () => {
+const Stats = ({ onRoleSelect }) => {
   const { t } = useTranslation();
   
   // Helper function to translate role names
@@ -295,6 +295,13 @@ const Stats = () => {
                     const isSelected = selectedRole === role;
                     const widthPercent = (count / roleMax) * 100;
                     const opacity = hoveredRole && hoveredRole !== role ? 0.3 : 1;
+                    const handleClick = () => {
+                      const nextRole = selectedRole === role ? null : role;
+                      setSelectedRole(nextRole);
+                      if (onRoleSelect) {
+                        onRoleSelect(nextRole);
+                      }
+                    };
                     
                     return (
                       <motion.div
@@ -304,7 +311,7 @@ const Stats = () => {
                         }`}
                         onMouseEnter={() => setHoveredRole(role)}
                         onMouseLeave={() => setHoveredRole(null)}
-                        onClick={() => setSelectedRole(selectedRole === role ? null : role)}
+                        onClick={handleClick}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -372,6 +379,13 @@ const Stats = () => {
                     const isSelected = selectedRole === role;
                     const widthPercent = (count / roleMax) * 100;
                     const opacity = hoveredRole && hoveredRole !== role ? 0.3 : 1;
+                    const handleClick = () => {
+                      const nextRole = selectedRole === role ? null : role;
+                      setSelectedRole(nextRole);
+                      if (onRoleSelect) {
+                        onRoleSelect(nextRole);
+                      }
+                    };
                     
                     return (
                       <motion.div
@@ -379,7 +393,7 @@ const Stats = () => {
                         className="relative group cursor-pointer"
                         onMouseEnter={() => setHoveredRole(role)}
                         onMouseLeave={() => setHoveredRole(null)}
-                        onClick={() => setSelectedRole(selectedRole === role ? null : role)}
+                        onClick={handleClick}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -447,6 +461,13 @@ const Stats = () => {
                     const isSelected = selectedRole === role;
                     const widthPercent = (count / roleMax) * 100;
                     const opacity = hoveredRole && hoveredRole !== role ? 0.3 : 1;
+                    const handleClick = () => {
+                      const nextRole = selectedRole === role ? null : role;
+                      setSelectedRole(nextRole);
+                      if (onRoleSelect) {
+                        onRoleSelect(nextRole);
+                      }
+                    };
                     
                     return (
                       <motion.div
@@ -454,7 +475,7 @@ const Stats = () => {
                         className="relative group cursor-pointer"
                         onMouseEnter={() => setHoveredRole(role)}
                         onMouseLeave={() => setHoveredRole(null)}
-                        onClick={() => setSelectedRole(selectedRole === role ? null : role)}
+                        onClick={handleClick}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}

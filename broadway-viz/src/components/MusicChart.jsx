@@ -43,11 +43,16 @@ const CountUpNumber = ({ value, duration = 1.4 }) => {
   return <span>{displayValue.toLocaleString()}</span>;
 };
 
-const MusicChart = ({ selectedConductor: propSelectedConductor = 'all', setSelectedConductor: propSetSelectedConductor }) => {
+const MusicChart = ({
+  selectedConductor: propSelectedConductor = 'all',
+  setSelectedConductor: propSetSelectedConductor,
+  selectedRole: propSelectedRole = 'all',
+  setSelectedRole: propSetSelectedRole
+}) => {
   const { t } = useTranslation();
   const [hoveredNote, setHoveredNote] = useState(null);
   const [selectedNoteId, setSelectedNoteId] = useState(null);
-  const [selectedRole, setSelectedRole] = useState('all');
+  const [selectedRole, setSelectedRole] = useState(propSelectedRole);
   const [selectedConductor, setSelectedConductor] = useState(propSelectedConductor);
   
   // Sync with prop when it changes externally
@@ -57,11 +62,23 @@ const MusicChart = ({ selectedConductor: propSelectedConductor = 'all', setSelec
     }
   }, [propSelectedConductor]);
   
+  useEffect(() => {
+    if (propSelectedRole !== undefined) {
+      setSelectedRole(propSelectedRole);
+    }
+  }, [propSelectedRole]);
+  
   // Use prop setter if provided, otherwise use local state
   const handleSetSelectedConductor = (value) => {
     setSelectedConductor(value);
     if (propSetSelectedConductor) {
       propSetSelectedConductor(value);
+    }
+  };
+  const handleSetSelectedRole = (value) => {
+    setSelectedRole(value);
+    if (propSetSelectedRole) {
+      propSetSelectedRole(value);
     }
   };
   const [compareLeft, setCompareLeft] = useState('');
@@ -957,7 +974,7 @@ const MusicChart = ({ selectedConductor: propSelectedConductor = 'all', setSelec
                 <div className="relative">
                   <select
                     value={selectedRole}
-                    onChange={(event) => setSelectedRole(event.target.value)}
+                    onChange={(event) => handleSetSelectedRole(event.target.value)}
                     className="w-full lg:w-72 px-3 py-2 rounded-lg bg-black/60 border border-gray-700/50 text-gray-300 focus:border-gray-600 focus:ring-1 focus:ring-gray-600/20 transition-all appearance-none text-sm"
                     aria-label={t('musicChart.filterByRole')}
                   >
