@@ -332,7 +332,7 @@
         "gatewayTitle": "The Gateway of Seamless Navigation",
         "gatewayBody": "For those who navigate the digital world via keyboard, we have integrated a \"Skip to Main Content\" utility. This allows users to bypass repetitive navigation and engage immediately with the narrative and data.",
         "semanticTitle": "Semantic Resonance (ARIA & i18n)",
-        "semanticBody": "Every interactive element—from the baton’s rhythm to the data filters—is enriched with descriptive ARIA labels. These labels are fully localized in English, French, and Arabic, ensuring that screen readers convey the site's soul in the user's native tongue.",
+        "semanticBody": "Every interactive element from the baton’s rhythm to the data filters is enriched with descriptive ARIA labels. These labels are fully localized in English, French, and Arabic, ensuring that screen readers convey the site's soul in the user's native tongue.",
         "visualTitle": "Visual Equity & Chromatic Clarity",
         "visualBody": "We have curated a high-contrast palette where every word stands clearly against the void. With a contrast ratio exceeding 4.5:1, the text remains legible for users with low vision or those viewing under challenging environmental conditions.",
         "svgTitle": "The Descriptive Canvas (SVG Accessibility)",
@@ -346,7 +346,7 @@
       "orchestralHarmony": {
         "title": "Orchestral Harmony: Reading the Maestra Count by Show",
         "paragraph1": "The Orchestral Harmony Chart treats each Broadway production as an instrument on a shared stage. Instead of bars or columns, the visualization encodes the volume of Women+ conducting credits with a small orchestra of icons: grand piano, strings, brass, and woodwinds. The goal is to let the eye read density as it would read a score: at a glance, without sacrificing precision.",
-        "paragraph2": "The encoding is deliberately discrete. Shows with ten or more Maestra credits are promoted to the grand piano tier—the visual anchor of the ensemble. Productions with five to nine credits are rendered as strings, two to four credits as brass, and a single appearance as a woodwind. This tiering keeps the legend cognitively light while still surfacing outliers and patterns in the tail.",
+        "paragraph2": "The encoding is deliberately discrete. Shows with ten or more Maestra credits are promoted to the grand piano tier the visual anchor of the ensemble. Productions with five to nine credits are rendered as strings, two to four credits as brass, and a single appearance as a woodwind. This tiering keeps the legend cognitively light while still surfacing outliers and patterns in the tail.",
         "paragraph3": "To avoid collapsing the data into a single icon, each instrument is paired with a cluster of baton glyphs. Every baton represents one recorded Women+ conducting credit for that show, with an overflow indicator (+n) when counts exceed the visual cap. Screen readers receive a parallel narrative via ARIA labels: instead of “piano image,” they announce, for example, “High representation: grand piano icon indicating 16 conductors for the show Six.” The result is a chart that behaves like a musical metaphor, but still speaks the precise language of counts, tiers, and shows."
       },
       "backstageTechnicals": {
@@ -355,15 +355,15 @@
         "jsonldTitle": "JSON-LD Dataset Schema",
         "jsonldBody": "The archive announces itself as a Dataset via Schema.org JSON-LD injected into the document head. It declares temporal coverage (1915–2025), the number of records (385 productions), and attribution to both the original dataset curator and the visualization author. This allows search engines to treat the work as a structured historical resource, not just a decorative website.",
         "metadataTitle": "Language-Aware Metadata",
-        "metadataBody": "Document titles and meta descriptions are updated dynamically when the visitor switches between English, French, and Arabic. Each route—Overture (home) and Script (documentation)—sets its own narrative: an interactive archive on the landing view, and a methodological guide on the Script view. This keeps the SPA architecture compatible with SEO expectations while respecting the multilingual voice of the project.",
+        "metadataBody": "Document titles and meta descriptions are updated dynamically when the visitor switches between English, French, and Arabic. Each route Overture (home) and Script (documentation)—sets its own narrative: an interactive archive on the landing view, and a methodological guide on the Script view. This keeps the SPA architecture compatible with SEO expectations while respecting the multilingual voice of the project.",
         "socialTitle": "Social Cards & The Data Baton",
         "socialBody": "Open Graph and Twitter Card metadata ensure that when the archive link is shared, the preview is not generic. The Data Baton logo, the Maestras of Broadway title, and a concise description travel with the URL. The result is a shareable artifact that looks like what it is: a carefully curated, analysis-ready archive of Women+ musical leadership."
       },
       "designPhilosophy": {
         "title": "Design Philosophy: Broadway Gold and the Data Baton",
-        "paragraph1": "The visual language of the archive is intentionally spare: a narrow palette of Broadway gold (#D4AF37) against deep theatre black. Gold is not used as a decorative flourish; it is reserved for structural elements—axes, roles, milestones, and navigation anchors—so that the eye learns to treat it as a signal of hierarchy and emphasis.",
+        "paragraph1": "The visual language of the archive is intentionally spare: a narrow palette of Broadway gold (#D4AF37) against deep theatre black. Gold is not used as a decorative flourish; it is reserved for structural elements axes, roles, milestones, and navigation anchors—so that the eye learns to treat it as a signal of hierarchy and emphasis.",
         "paragraph2": "The Data Baton logo sits at the intersection of analysis and performance. It is a conductor’s tool rendered as a data glyph: a reminder that every mark on the screen corresponds to a documented Women+ career, and that every interaction is a form of reading an historical score. The logo appears in the navigation, the favicon, and social previews so that the archive is recognizable even when detached from its full interface.",
-        "paragraph3": "Typography follows the same principle. A serif face carries the narrative elements—section titles, quotes, and framing sentences—while a clean sans-serif carries labels, counts, and controls. The result is a quiet contract between story and structure: the interface remains theatrical, but the data never has to compete with the staging."
+        "paragraph3": "Typography follows the same principle. A serif face carries the narrative elements section titles, quotes, and framing sentences—while a clean sans-serif carries labels, counts, and controls. The result is a quiet contract between story and structure: the interface remains theatrical, but the data never has to compete with the staging."
       }
     },
     "exploreButton": "Explore the Visualizations",
