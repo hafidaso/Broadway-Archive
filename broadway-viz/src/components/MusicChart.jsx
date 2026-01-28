@@ -2,7 +2,6 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation, Trans } from 'react-i18next';
 import { stack, stackOffsetSilhouette, area, curveBasis, scaleLinear } from 'd3';
-import { toPng } from 'html-to-image';
 import { Share2 } from 'lucide-react';
 import useSound from 'use-sound';
 import data from '../assets/data/cleaned_data.json';
@@ -171,18 +170,248 @@ const MusicChart = ({ selectedConductor: propSelectedConductor = 'all', setSelec
     document.body.removeChild(link);
   };
 
+  const createShareImageDataUrl = async (note) => {
+    const width = 1080;
+    const height = 1350;
+    const scale = 2; // crisp export
+
+    const canvas = document.createElement('canvas');
+    canvas.width = width * scale;
+    canvas.height = height * scale;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return null;
+
+    ctx.scale(scale, scale);
+
+    // Background: deep theatre black with subtle radial glow
+    const bgGradient = ctx.createRadialGradient(
+      width / 2,
+      height * 0.3,
+      0,
+      width / 2,
+      height / 2,
+      Math.max(width, height) * 0.75
+    );
+    bgGradient.addColorStop(0, '#14110f');
+    bgGradient.addColorStop(0.5, '#050505');
+    bgGradient.addColorStop(1, '#000000');
+    ctx.fillStyle = bgGradient;
+    ctx.fillRect(0, 0, width, height);
+
+    // Very soft vignette
+    const vignette = ctx.createRadialGradient(
+      width / 2,
+      height / 2,
+      0,
+      width / 2,
+      height / 2,
+      Math.max(width, height) * 0.9
+    );
+    vignette.addColorStop(0.6, 'rgba(0,0,0,0)');
+    vignette.addColorStop(1, 'rgba(0,0,0,0.6)');
+    ctx.fillStyle = vignette;
+    ctx.fillRect(0, 0, width, height);
+
+    // Border + inner glow frame
+    ctx.strokeStyle = 'rgba(212, 175, 55, 0.68)';
+    ctx.lineWidth = 4;
+    ctx.strokeRect(26, 26, width - 52, height - 52);
+    ctx.strokeStyle = 'rgba(212, 175, 55, 0.28)';
+    ctx.lineWidth = 1.5;
+    ctx.strokeRect(42, 42, width - 84, height - 84);
+
+    // Subtle horizontal "staff" lines behind content
+    ctx.save();
+    ctx.globalAlpha = 0.15;
+    ctx.strokeStyle = 'rgba(245, 237, 211, 0.25)';
+    ctx.lineWidth = 1;
+    const staffTop = height * 0.28;
+    const staffSpacing = 32;
+    for (let i = -2; i <= 2; i += 1) {
+      const y = staffTop + i * staffSpacing;
+      ctx.beginPath();
+      ctx.moveTo(120, y);
+      ctx.lineTo(width - 120, y);
+      ctx.stroke();
+    }
+    ctx.restore();
+
+    // Typography
+    const serif = '"Playfair Display", "Times New Roman", serif';
+    const sans = '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+
+    // Respect RTL when Arabic
+    const isRtl = typeof document !== 'undefined' && document.documentElement?.dir === 'rtl';
+    ctx.direction = isRtl ? 'rtl' : 'ltr';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'alphabetic';
+
+    // Helper: wrap text
+    const wrapLines = (text, maxWidth, font) => {
+      if (!text) return [''];
+      ctx.font = font;
+      const words = String(text).split(/\s+/).filter(Boolean);
+      const lines = [];
+      let line = '';
+      for (const word of words) {
+        const test = line ? `${line} ${word}` : word;
+        if (ctx.measureText(test).width <= maxWidth) {
+          line = test;
+        } else {
+          if (line) lines.push(line);
+          line = word;
+        }
+      }
+      if (line) lines.push(line);
+      return lines.length ? lines : [''];
+    };
+
+    // Header
+    ctx.fillStyle = '#D4AF37';
+    ctx.font = `600 26px ${serif}`;
+    const header = t('musicChart.shareImage.title');
+    ctx.fillText(header, width / 2, 120);
+
+    // Divider with baton-like accent
+    ctx.save();
+    ctx.translate(width / 2, 150);
+    ctx.strokeStyle = 'rgba(212, 175, 55, 0.4)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(-110, 0);
+    ctx.lineTo(110, 0);
+    ctx.stroke();
+    ctx.fillStyle = '#D4AF37';
+    ctx.beginPath();
+    ctx.arc(0, 0, 4, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+
+    // Optional portrait (if CORS allows image drawing)
+    const portraitSize = 200;
+    const portraitRadius = portraitSize / 2;
+    const portraitY = 360;
+
+    if (note?.photo) {
+      try {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.src = note.photo;
+
+        await new Promise((resolve) => {
+          img.onload = resolve;
+          img.onerror = resolve;
+        });
+
+        if (img.complete && img.naturalWidth > 0) {
+          const px = width / 2;
+          const py = portraitY;
+
+          // Soft glow behind portrait
+          const glowGradient = ctx.createRadialGradient(
+            px,
+            py,
+            portraitRadius * 0.4,
+            px,
+            py,
+            portraitRadius * 1.4
+          );
+          glowGradient.addColorStop(0, 'rgba(212,175,55,0.45)');
+          glowGradient.addColorStop(1, 'rgba(212,175,55,0)');
+          ctx.fillStyle = glowGradient;
+          ctx.beginPath();
+          ctx.arc(px, py, portraitRadius * 1.5, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Circular masked image
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(px, py, portraitRadius, 0, Math.PI * 2);
+          ctx.closePath();
+          ctx.clip();
+
+          // Draw image centered
+          const imgAspect = img.width / img.height;
+          let drawW = portraitSize;
+          let drawH = portraitSize;
+          if (imgAspect > 1) {
+            drawW = portraitSize * imgAspect;
+          } else {
+            drawH = portraitSize / imgAspect;
+          }
+          ctx.drawImage(
+            img,
+            px - drawW / 2,
+            py - drawH / 2,
+            drawW,
+            drawH
+          );
+          ctx.restore();
+
+          // Gold ring
+          ctx.strokeStyle = 'rgba(212,175,55,0.9)';
+          ctx.lineWidth = 4;
+          ctx.beginPath();
+          ctx.arc(px, py, portraitRadius + 4, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+      } catch (e) {
+        // If CORS/tainting happens, silently skip portrait and continue
+        console.warn('Share portrait draw skipped:', e);
+      }
+    }
+
+    // Main content
+    const conductorName = note?.conductor || '';
+    const showTitle = note?.show || '';
+    const date = note?.date || '';
+
+    // Conductor (big)
+    ctx.fillStyle = '#D4AF37';
+    ctx.font = `700 64px ${serif}`;
+    const nameLines = wrapLines(conductorName, 900, ctx.font);
+    let y = portraitY + portraitRadius + 80;
+    for (const line of nameLines.slice(0, 3)) {
+      ctx.fillText(line, width / 2, y);
+      y += 76;
+    }
+
+    // Show title (wrapped)
+    ctx.fillStyle = '#f5edd3';
+    ctx.font = `500 30px ${serif}`;
+    const showLines = wrapLines(showTitle, 860, ctx.font);
+    y += 10;
+    for (const line of showLines.slice(0, 3)) {
+      ctx.fillText(line, width / 2, y);
+      y += 42;
+    }
+
+    // Date
+    ctx.fillStyle = 'rgba(245, 237, 211, 0.7)';
+    ctx.font = `600 18px ${sans}`;
+    ctx.fillText(String(date), width / 2, y + 40);
+
+    // Footer
+    ctx.fillStyle = 'rgba(212, 175, 55, 0.7)';
+    ctx.font = `600 16px ${sans}`;
+    const left = t('musicChart.shareImage.dataBy');
+    const right = t('musicChart.shareImage.archive');
+    ctx.textAlign = isRtl ? 'right' : 'left';
+    ctx.fillText(left, 86, height - 86);
+    ctx.textAlign = isRtl ? 'left' : 'right';
+    ctx.fillText(right, width - 86, height - 86);
+
+    return canvas.toDataURL('image/png');
+  };
+
   const handleShare = async (note) => {
     if (!note) return;
     setShareNote(note);
 
-    await new Promise((resolve) => requestAnimationFrame(resolve));
-    if (!shareCardRef.current) return;
-
     try {
-      const dataUrl = await toPng(shareCardRef.current, {
-        pixelRatio: 2,
-        cacheBust: true
-      });
+      // Generate share image via Canvas (more reliable than DOM->PNG on some devices)
+      const dataUrl = await createShareImageDataUrl(note);
+      if (!dataUrl) throw new Error('Failed to create share image');
 
       const filename = createShareFilename(note.conductor);
 
@@ -403,7 +632,10 @@ const MusicChart = ({ selectedConductor: propSelectedConductor = 'all', setSelec
     const unique = new Set(
       data.map(d => d?.conductor_info?.name).filter(Boolean)
     );
-    return Array.from(unique).sort((a, b) => a.localeCompare(b));
+    const locale =
+      (typeof navigator !== 'undefined' && navigator.language) || 'en';
+    const collator = new Intl.Collator(locale, { sensitivity: 'base' });
+    return Array.from(unique).sort((a, b) => collator.compare(a, b));
   }, []);
 
   const filteredLeftOptions = useMemo(() => {
@@ -411,8 +643,13 @@ const MusicChart = ({ selectedConductor: propSelectedConductor = 'all', setSelec
     const baseOptions = compareRight
       ? conductorOptions.filter(name => name !== compareRight)
       : conductorOptions;
-    if (!query) return baseOptions;
-    return baseOptions.filter(name => name.toLowerCase().includes(query));
+    const filtered = !query
+      ? baseOptions
+      : baseOptions.filter(name => name.toLowerCase().includes(query));
+    const locale =
+      (typeof navigator !== 'undefined' && navigator.language) || 'en';
+    const collator = new Intl.Collator(locale, { sensitivity: 'base' });
+    return filtered.slice().sort((a, b) => collator.compare(a, b));
   }, [conductorOptions, compareLeftQuery, compareRight]);
 
   const filteredRightOptions = useMemo(() => {
@@ -420,8 +657,13 @@ const MusicChart = ({ selectedConductor: propSelectedConductor = 'all', setSelec
     const baseOptions = compareLeft
       ? conductorOptions.filter(name => name !== compareLeft)
       : conductorOptions;
-    if (!query) return baseOptions;
-    return baseOptions.filter(name => name.toLowerCase().includes(query));
+    const filtered = !query
+      ? baseOptions
+      : baseOptions.filter(name => name.toLowerCase().includes(query));
+    const locale =
+      (typeof navigator !== 'undefined' && navigator.language) || 'en';
+    const collator = new Intl.Collator(locale, { sensitivity: 'base' });
+    return filtered.slice().sort((a, b) => collator.compare(a, b));
   }, [conductorOptions, compareRightQuery, compareLeft]);
 
   // Prevent comparing the same person on both sides
@@ -1279,11 +1521,15 @@ const MusicChart = ({ selectedConductor: propSelectedConductor = 'all', setSelec
           <div
             ref={shareCardRef}
             style={{
+              // Keep the node in the viewport for reliable html-to-image rendering,
+              // but make it fully invisible and non-interactive.
               position: 'fixed',
-              top: '-10000px',
-              left: '-10000px',
+              top: 0,
+              left: 0,
               width: '1080px',
               height: '1350px',
+              opacity: 0,
+              pointerEvents: 'none',
               backgroundColor: '#050505',
               border: '2px solid rgba(212, 175, 55, 0.55)',
               padding: '80px',
