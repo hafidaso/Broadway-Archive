@@ -656,13 +656,31 @@ const MusicChart = ({
   }, []);
 
   const filteredLeftOptions = useMemo(() => {
-    const query = compareLeftQuery.trim().toLowerCase();
+    const normalizeForSearch = (value) =>
+      String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+
+    const query = normalizeForSearch(compareLeftQuery.trim());
     const baseOptions = compareRight
       ? conductorOptions.filter(name => name !== compareRight)
       : conductorOptions;
-    const filtered = !query
-      ? baseOptions
-      : baseOptions.filter(name => name.toLowerCase().includes(query));
+
+    if (!query) return baseOptions;
+
+    // Prefer "starts with" matching (beginning of name or any word) for predictable A→Z results.
+    const startsWithMatches = baseOptions.filter((name) => {
+      const n = normalizeForSearch(name);
+      if (n.startsWith(query)) return true;
+      const parts = n.split(/[\s'’\-]+/).filter(Boolean);
+      return parts.some((part) => part.startsWith(query));
+    });
+
+    // If nothing matches by prefix, fall back to "contains" to still help discovery.
+    const filtered = startsWithMatches.length
+      ? startsWithMatches
+      : baseOptions.filter((name) => normalizeForSearch(name).includes(query));
     const locale =
       (typeof navigator !== 'undefined' && navigator.language) || 'en';
     const collator = new Intl.Collator(locale, { sensitivity: 'base' });
@@ -670,13 +688,31 @@ const MusicChart = ({
   }, [conductorOptions, compareLeftQuery, compareRight]);
 
   const filteredRightOptions = useMemo(() => {
-    const query = compareRightQuery.trim().toLowerCase();
+    const normalizeForSearch = (value) =>
+      String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+
+    const query = normalizeForSearch(compareRightQuery.trim());
     const baseOptions = compareLeft
       ? conductorOptions.filter(name => name !== compareLeft)
       : conductorOptions;
-    const filtered = !query
-      ? baseOptions
-      : baseOptions.filter(name => name.toLowerCase().includes(query));
+
+    if (!query) return baseOptions;
+
+    // Prefer "starts with" matching (beginning of name or any word) for predictable A→Z results.
+    const startsWithMatches = baseOptions.filter((name) => {
+      const n = normalizeForSearch(name);
+      if (n.startsWith(query)) return true;
+      const parts = n.split(/[\s'’\-]+/).filter(Boolean);
+      return parts.some((part) => part.startsWith(query));
+    });
+
+    // If nothing matches by prefix, fall back to "contains" to still help discovery.
+    const filtered = startsWithMatches.length
+      ? startsWithMatches
+      : baseOptions.filter((name) => normalizeForSearch(name).includes(query));
     const locale =
       (typeof navigator !== 'undefined' && navigator.language) || 'en';
     const collator = new Intl.Collator(locale, { sensitivity: 'base' });
