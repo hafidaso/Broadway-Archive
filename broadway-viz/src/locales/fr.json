@@ -126,6 +126,12 @@
       "dataBy": "Données par Sariva Goetz",
       "archive": "Archives de Broadway"
     },
+    "roleNames": {
+      "conductor": "Cheffe d'orchestre",
+      "musicDirector": "Directrice musicale",
+      "musicSupervisor": "Superviseuse musicale",
+      "otherLeadership": "Autre rôle de direction"
+    },
     "compare": {
       "selectConductorA": "Sélectionner la cheffe A",
       "selectConductorB": "Sélectionner la cheffe B",

@@ -126,6 +126,12 @@
       "dataBy": "Data by Sariva Goetz",
       "archive": "Broadway Archive"
     },
+    "roleNames": {
+      "conductor": "Conductor",
+      "musicDirector": "Music Director",
+      "musicSupervisor": "Music Supervisor",
+      "otherLeadership": "Other Leadership"
+    },
     "compare": {
       "selectConductorA": "Select Conductor A",
       "selectConductorB": "Select Conductor B",
