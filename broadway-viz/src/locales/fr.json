@@ -1,0 +1,418 @@
+{
+  "app": {
+    "title": "L'Héritage de la Baguette",
+    "subtitle": "Cheffes d'orchestre à Broadway",
+    "archiveBadge": "Archives de Broadway",
+    "tagline": "Un siècle de direction musicale — Données sélectionnées par Sariva Goetz",
+    "ctaTimeline": "Explorer la chronologie",
+    "ctaChart": "Voir le graphique",
+    "skipToMain": "Aller au contenu principal",
+    "scrollProgress": "Progression du défilement",
+    "milestoneHeader": "🎭 MOMENT HISTORIQUE —",
+    "milestoneFirstRecorded": "Première production répertoriée",
+    "milestoneFirstRole": "Première {{role}}",
+    "milestoneLongestRunning": "Production la plus longue",
+    "milestoneShowLabel": "Production :",
+    "milestoneRoleLabel": "Rôle :",
+    "milestoneConductorLabel": "Chef.fe d'orchestre :",
+    "milestoneDateLabel": "Date :",
+    "milestonePerformancesLabel": "Représentations :",
+    "exploreTitle": "Explorer les données",
+    "exploreSubtitle": "Passez d'une vue interactive à l'autre ou téléchargez le jeu de données.",
+    "viewChart": "Graphique",
+    "viewTimeline": "Chronologie",
+    "viewTable": "Tableau",
+    "downloadCsv": "Télécharger le CSV",
+    "csvFilename": "broadway_conductrices.csv",
+    "scrollToTop": "Remonter en haut"
+  },
+  "nav": {
+    "home": "Entrée",
+    "about": "Coulisses",
+    "highlights": "Étoiles",
+    "stats": "Chiffres",
+    "explore": "Scène",
+    "documentation": "Guide",
+    "menu": "Menu"
+  },
+  "labels": {
+    "conductor": "Chef.fe d'orchestre",
+    "production": "Production",
+    "decade": "Décennie",
+    "role": "Rôle",
+    "openingDate": "Ouverture",
+    "photo": "Photo"
+  },
+  "about": {
+    "title": "À propos du projet",
+    "introLead": "Broadway possède une histoire foisonnante, tissée de musique et de création artistique. Pourtant, jusqu’à une période récente, la question de la représentation des",
+    "introHighlight": "cheffes d’orchestre, directrices musicales et superviseuses musicales, y compris les personnes non binaires",
+    "introTail": "est longtemps demeurée dans l’ombre.",
+    "introBody": "Cette visualisation donne chair à cette histoire à travers une frise chronologique interactive, qui célèbre les avancées accomplies tout en mettant en lumière le chemin qu’il reste encore à parcourir. Elle retrace la présence des cheffes d’orchestre sur Broadway, depuis le début du XXᵉ siècle jusqu’à nos jours.",
+    "contestTitle": "Participation au concours",
+    "contestBody": "Créé pour le",
+    "contestName": "concours de visualisation des données Women+ Conductors on Broadway",
+    "creditsTitle": "Crédits des données",
+    "creditsCuratedBy": "Données sélectionnées par",
+    "creditsVisualizationBy": "Visualisation par",
+    "powerStatement": "Une voix inaudible, maintenant à la tête du spectacle.",
+    "exploreLegacy": "Explorer l'héritage ↓",
+    "conductors": "Cheffes d'orchestre",
+    "directors": "Directrices",
+    "supervisors": "Superviseuses"
+  },
+  "highlights": {
+    "title": "Cheffes à l'honneur",
+    "subtitle": "Mise en lumière des cheffes ayant le plus de productions Broadway enregistrées dans cet ensemble de données.",
+    "featuredShow": "Spectacle mis en avant :",
+    "recordedProductions": "Productions enregistrées :",
+    "insights": {
+      "topRecorded": "Plus enregistrée",
+      "historicalPioneer": "Pionnière historique",
+      "longestSpan": "Période la plus longue"
+    },
+    "navigation": {
+      "previous": "Cheffe précédente",
+      "next": "Cheffe suivante"
+    }
+  },
+  "stats": {
+    "title": "En chiffres",
+    "leadershipRoles": "Rôles de leadership",
+    "hierarchyDescription": "Hiérarchie de leadership et distribution des responsabilités",
+    "primaryLeadership": "Leadership principal",
+    "secondaryLeadership": "Leadership secondaire",
+    "supportingRoles": "Rôles de soutien",
+    "total": "total",
+    "womenPlusConductors": "Cheffes d'orchestre+",
+    "broadwayShows": "Spectacles Broadway",
+    "decades": "Décennies",
+    "totalProductions": "Total des productions",
+    "production": "production",
+    "productions": "productions"
+  },
+  "musicChart": {
+    "title": "Représentation de la portée musicale",
+    "description": "Chaque note représente une production Broadway. Les flux représentent chaque rôle de leadership au fil du temps, comme une vague musicale.",
+    "filterByRole": "Filtrer par rôle",
+    "searchConductor": "Rechercher une cheffe d'orchestre",
+    "allConductors": "Toutes les cheffes d'orchestre",
+    "legend": {
+      "standardNote": "Note standard",
+      "hoveredNote": "Note survolée",
+      "roleRows": "Rangées de rôles",
+      "yearAxis": "Axe des années"
+    },
+    "tipClickNote": "Cliquez sur une note pour voir les détails et la photo",
+    "tipDoubleClick": "Double-cliquez sur le graphique pour zoomer/dézoomer",
+    "displaying": "Affichage de <1>{{count}}</1> productions",
+    "filteredBy": "Filtré par",
+    "focusMode": "Mode focus :",
+    "zoomedIn": "Zoom activé",
+    "closeDetails": "Fermer les détails",
+    "details": "Détails",
+    "noteAria": "Afficher les détails pour {{conductor}}, {{show}}",
+    "mute": "Couper le son",
+    "unmute": "Activer le son",
+    "shareMilestone": "Partager cette étape",
+    "shareTitle": "Partager cette étape",
+    "shareText": "Célébrons un jalon historique de Broadway",
+    "activeConductors": "Cheffes actives :",
+    "showAll": "Afficher tout",
+    "openingDate": "Date d'ouverture",
+    "conductorRank": "Rang de la cheffe",
+    "shareImage": {
+      "title": "L'Héritage de la Baguette",
+      "dataBy": "Données par Sariva Goetz",
+      "archive": "Archives de Broadway"
+    },
+    "compare": {
+      "selectConductorA": "Sélectionner la cheffe A",
+      "selectConductorB": "Sélectionner la cheffe B",
+      "leadershipProfile": "Profil de leadership :",
+      "signatureWork": "Œuvre signature :",
+      "vs": "CONTRE",
+      "comparisonDashboard": "Tableau de comparaison",
+      "compareLegacies": "Comparez les héritages des cheffes côte à côte",
+      "careerTimeline": "Chronologie de carrière :",
+      "totalRecordedProductions": "Total des productions enregistrées",
+      "searchPlaceholder": "Rechercher une cheffe",
+      "selectAnother": "Sélectionner une autre cheffe pour comparer les héritages",
+      "chooseToBegin": "Choisissez une cheffe pour commencer"
+    }
+  },
+  "timeline": {
+    "filterSearch": "Filtrer & Rechercher",
+    "search": "Rechercher",
+    "searchPlaceholder": "Rechercher une cheffe d'orchestre ou un spectacle...",
+    "roleLabel": "Rôle",
+    "decadeLabel": "Décennie",
+    "allRoles": "Tous les rôles",
+    "allDecades": "Toutes les décennies",
+    "clearFilters": "Effacer les filtres",
+    "noFilters": "Aucun filtre actif",
+    "showing": "Affichage",
+    "of": "sur",
+    "results": "résultats",
+    "noResultsTitle": "Aucun résultat trouvé",
+    "noResultsText": "Essayez d’ajuster vos filtres ou votre recherche pour explorer davantage.",
+    "resetFilters": "Réinitialiser les filtres",
+    "toggleFiltersShow": "Afficher les filtres",
+    "toggleFiltersHide": "Masquer les filtres",
+    "searchAria": "Rechercher des cheffes d'orchestre ou des spectacles",
+    "roleAria": "Filtrer par rôle",
+    "decadeAria": "Filtrer par décennie",
+    "unknownDecade": "Inconnue",
+    "decadeOption": "années {{decade}}",
+    "decadeHeading": "années {{decade}}"
+  },
+  "dataTable": {
+    "title": "Tableau de données",
+    "subtitle": "Rechercher par nom de cheffe d'orchestre.",
+    "sortedBy": "Trié par",
+    "name": "Nom",
+    "date": "Date",
+    "searchPlaceholder": "Rechercher une cheffe...",
+    "searchAria": "Rechercher dans le tableau",
+    "headers": {
+      "conductor": "Chef.fe d'orchestre",
+      "role": "Rôle",
+      "show": "Spectacle",
+      "opening": "Ouverture",
+      "decade": "Décennie"
+    },
+    "unknown": "Inconnu.e",
+    "showing": "Affichage de {{count}} sur {{total}} enregistrements."
+  },
+  "cards": {
+    "unknownConductor": "Chef.fe inconnu.e",
+    "unknownRole": "Rôle inconnu",
+    "unknownShow": "Spectacle inconnu",
+    "dateUnknown": "Date inconnue",
+    "pioneer": "Pionnière",
+    "pioneerTooltip": "Première femme dans ce rôle",
+    "portraitAlt": "Portrait de {{name}}",
+    "ariaLabel": "Production : {{production}}, chef.fe d'orchestre : {{conductor}}"
+  },
+  "roles": {
+    "Music Supervisor": "Superviseuse musicale",
+    "Music Director": "Directrice musicale",
+    "Music Director / Conductor": "Directrice musicale / Cheffe d'orchestre",
+    "Conductor": "Cheffe d'orchestre",
+    "Associate Music Director": "Directrice musicale associée",
+    "Associate Music Director / Associate Conductor": "Directrice musicale associée / Cheffe d'orchestre associée",
+    "Associate Conductor": "Cheffe d'orchestre associée",
+    "Assistant Conductor": "Cheffe d'orchestre assistante",
+    "Alternate Conductor": "Cheffe d'orchestre suppléante",
+    "Substitute Conductor": "Cheffe d'orchestre remplaçante",
+    "Assistant Music Director": "Directrice musicale assistante",
+    "Associate Music Supervisor": "Superviseuse musicale associée"
+  },
+  "footer": {
+    "subtitle": "Cheffes d'orchestre à Broadway",
+    "contestEntry": "Participation au concours de visualisation de données",
+    "dataCuratedBy": "Données sélectionnées par {{name}}",
+    "visualizationBy": "Visualisation par {{name}}",
+    "copyright": "© 2026 — Créé avec amour, passion et 🎼 pour le concours Women+ Conductors on Broadway",
+    "documentation": "Documentation",
+    "licenseNote": "Ce projet est partagé sous licence CC BY. Données sélectionnées par Sariva Goetz.",
+    "dataCredit": "Données sélectionnées par Sariva Goetz"
+  },
+  "documentation": {
+    "title": "Documentation et Méthodologie",
+    "subtitle": "Découvrez les données, la méthodologie et comment utiliser cette visualisation.",
+    "quickNav": "Navigation rapide",
+    "sections": {
+      "overview": "Aperçu",
+      "dataSource": "Source des données",
+      "howToUse": "Comment utiliser",
+      "methodology": "Méthodologie"
+    },
+    "overview": {
+      "paragraph1": "Cette visualisation interactive célèbre les contributions des cheffes d'orchestre Women+ à Broadway de 1915 à nos jours. Grâce à plusieurs vues interactives—notamment la visualisation Orchestral Wave, une chronologie et un tableau de données consultable nous mettons en lumière les histoires de 385 productions et des 103 cheffes d'orchestre talentueuses qui les ont dirigées.",
+      "paragraph2": "Notre mission est de rendre visible l'histoire souvent négligée du leadership musical Women+ à Broadway, en fournissant de la transparence sur les sources de données, la méthodologie et les outils utilisés pour créer cette visualisation.",
+      "stats": {
+        "productions": "Productions",
+        "startYear": "Année de début",
+        "conductors": "Cheffes d'orchestre"
+      }
+    },
+    "dataSource": {
+      "intro": "Cette visualisation est construite sur un ensemble de données révolutionnaire la première collection complète de son genre documentant les cheffes d'orchestre Women+ à Broadway. Les données représentent des années de recherche et de curation méticuleuses.",
+      "curator": "Conservatrice des données",
+      "curatorDesc": "Sariva Goetz a méticuleusement recherché et compilé cet ensemble de données historique, documentant chaque production connue mettant en vedette des cheffes d'orchestre Women+ à Broadway.",
+      "dataEngineer": "Ingénieur des données",
+      "dataEngineerDesc": "Steve Wexler a traité et structuré les données brutes, garantissant l'exactitude et la cohérence sur les 385 enregistrements de production.",
+      "leadDataScientist": "Scientifique des données principale & Stratège en visualisation",
+      "leadDataScientistDesc": "Hafida Belayd a conçu l'architecture de la plateforme interactive et la stratégie de données, transformant l'ensemble de données brut en un outil d'analyse haute performance. Elle a conçu et développé le système de visualisation, implémenté l'Orchestral Wave, conçu le pipeline d'enrichissement des données (regroupement chronologique, marquage des pionniers, normalisation des rôles, synthèse des métriques), et construit le Tableau de comparaison, assurant la précision analytique et les capacités d'analyse longitudinale dans toute l'application.",
+      "historicNote": "Première historique :",
+      "historicDesc": "Il s'agit du premier ensemble de données de ce type à documenter de manière exhaustive les cheffes d'orchestre Women+ à Broadway, ce qui en fait une ressource précieuse pour les chercheurs, les historiens et les passionnés de Broadway."
+    },
+    "howToUse": {
+      "chart": {
+        "title": "Visualisation Orchestral Wave",
+        "tip1": "Cliquez sur n'importe quelle note (cercle) pour voir des informations détaillées sur cette production et cette cheffe d'orchestre.",
+        "tip2": "Utilisez les boutons de filtre de rôle pour mettre en évidence des rôles de leadership spécifiques (Directrice musicale, Cheffe d'orchestre, etc.).",
+        "tip3": "Sélectionnez une cheffe d'orchestre dans le menu déroulant pour vous concentrer sur sa trajectoire de carrière complète.",
+        "tip4": "Utilisez le Tableau de comparaison pour comparer deux cheffes d'orchestre côte à côte, analysant leurs chronologies de carrière, productions totales et œuvre signature.",
+        "tip5": "Exportez l'Orchestral Wave sous forme d'image PNG pour le partage ou la documentation."
+      },
+      "highlights": {
+        "title": "Carrousel des cheffes d'orchestre en vedette",
+        "tip1": "Sur les appareils mobiles, faites glisser le carrousel infini pour explorer les cheffes d'orchestre en vedette.",
+        "tip2": "Cliquez sur n'importe quelle carte de cheffe d'orchestre pour filtrer la visualisation Orchestral Wave à sa carrière.",
+        "tip3": "Chaque carte affiche des informations telles que 'Top Recorded', 'Historical Pioneer' ou 'Longest Span'."
+      },
+      "interactions": {
+        "title": "Fonctionnalités interactives",
+        "tip1": "Sur ordinateur, découvrez le curseur de baguette animé qui suit le mouvement de votre souris, créant une expérience immersive de direction.",
+        "tip2": "L'animation de la baguette dans la section Hero répond à la progression du défilement, tournant et brillant pendant que vous explorez l'histoire."
+      },
+      "timeline": {
+        "title": "Chronologie",
+        "tip1": "Recherchez par nom de cheffe d'orchestre ou titre de spectacle à l'aide de la barre de recherche en haut.",
+        "tip2": "Filtrez par rôle et décennie à l'aide des menus déroulants pour affiner votre exploration.",
+        "tip3": "Cliquez sur n'importe quelle carte de production pour voir plus de détails sur ce spectacle et cette cheffe d'orchestre."
+      },
+      "table": {
+        "title": "Tableau de données",
+        "tip1": "Recherchez dans tous les champs (nom de cheffe d'orchestre, titre de spectacle, rôle, etc.) à l'aide de la recherche.",
+        "tip2": "Cliquez sur n'importe quel en-tête de colonne pour trier les données par ce champ (cliquez à nouveau pour inverser l'ordre).",
+        "tip3": "Téléchargez l'ensemble de données complet sous forme de fichier CSV à l'aide du bouton 'Télécharger CSV'."
+      }
+    },
+    "methodology": {
+      "intro": "Cette visualisation a été construite à l'aide de technologies web modernes pour assurer l'interactivité, l'accessibilité et les performances sur tous les appareils. Les données ont été soigneusement traitées et validées avant d'être intégrées dans la visualisation.",
+      "dataIntegrity": "Pour assurer les plus hauts standards d'intégrité des données, le pipeline d'enrichissement a été validé par une vérification croisée itérative avec les enregistrements d'archives originaux conservés par Sariva Goetz.",
+      "tech": {
+        "react": "Framework React",
+        "reactDesc": "Construit avec React 19.2.0 pour une architecture basée sur les composants, assurant des interactions fluides et un code maintenable.",
+        "vite": "Outil de build Vite",
+        "viteDesc": "Alimenté par Vite (Rolldown) pour un développement ultra-rapide et des builds de production optimisés avec bundling basé sur Rust.",
+        "framer": "Framer Motion",
+        "framerDesc": "Framer Motion 12.26.2 fournit des animations fluides basées sur le défilement, des transitions de page et des effets de mouvement interactifs dans toute l'application.",
+        "d3": "Visualisation D3.js",
+        "d3Desc": "L'Orchestral Wave utilise D3.js 7.9.0 pour mapper le temps aux angles et les rôles aux lignes en spirale, créant une représentation intuitive de la portée musicale avec des notes interactives.",
+        "tailwind": "Tailwind CSS",
+        "tailwindDesc": "Le style utilise Tailwind CSS 4.1.18 avec une palette de couleurs personnalisée sur le thème de Broadway (or et noir) pour une cohérence visuelle et un design responsive."
+      },
+      "dataProcessing": {
+        "title": "Étapes de traitement des données",
+        "step1": "Les données brutes ont été collectées et conservées par Sariva Goetz, documentant 385 productions de 1915 à 2025.",
+        "step2": "Les données ont été traitées et structurées par Steve Wexler, assurant un formatage et une validation cohérents.",
+        "step3": "L'ensemble de données a été nettoyé et enrichi avec des métadonnées supplémentaires (décennies, drapeaux de pionniers, etc.).",
+        "step4": "Les données ont été intégrées dans la visualisation avec des capacités de filtrage, de tri et de recherche en temps réel."
+      },
+      "dataEnrichment": {
+        "title": "Enrichissement des données & Encodage analytique",
+        "intro": "Pour transformer l'ensemble de données brut en un outil d'analyse haute performance, une couche secondaire d'enrichissement des données a été implémentée. Ce processus a assuré que la visualisation puisse supporter l'analyse longitudinale et la narration complexe.",
+        "chronologicalBinning": {
+          "title": "Regroupement chronologique (Décennies)",
+          "desc": "Les dates de production brutes ont été programmatiquement catégorisées en groupes de décennies (par ex., années 1920, années 1930) pour permettre un filtrage fluide et une analyse comparative sur un siècle d'histoire de Broadway."
+        },
+        "pioneerFlagging": {
+          "title": "Marquage analytique des pionniers",
+          "desc": "Des enregistrements spécifiques ont été enrichis de \"Drapeaux de pionniers\" basés sur l'importance historique (par ex., Première femme directrice musicale). Cette catégorisation alimente la logique des Cheffes d'orchestre en vedette et fournit un contexte immédiat pour les chercheurs."
+        },
+        "roleNormalization": {
+          "title": "Normalisation des rôles",
+          "desc": "En utilisant des scripts spécialisés, les titres de rôles de leadership inconsistants des archives originales ont été normalisés et standardisés en trois catégories principales : Cheffes d'orchestre, Directrices musicales et Superviseures musicales. Ce processus était essentiel pour assurer la précision du rendu de l'Orchestral Wave."
+        },
+        "metricSynthesis": {
+          "title": "Synthèse des métriques",
+          "desc": "De nouveaux champs de données ont été calculés pour chaque cheffe d'orchestre, incluant la durée totale de carrière et le nombre de productions, permettant la fonctionnalité en temps réel du Tableau de comparaison."
+        },
+        "note": "Cet encodage analytique distingue entre les données d'archives brutes et les insights enrichis, assurant la transparence et la précision dans la visualisation "
+      },
+      "accessibility": {
+        "title": "Accessibilité : un engagement pour un récit inclusif",
+        "intro": "Les données ne sont puissantes que si elles atteignent leur public. En retraçant l’histoire des cheffes d’orchestre Women+ à Broadway, nous croyons que les histoires de ces pionnières doivent être accessibles à toutes et tous, au‑delà des barrières physiques ou visuelles. Ce projet est conçu avec le plus grand soin pour respecter les normes WCAG 2.1 (niveau AA) et offrir une expérience fluide et digne à chaque personne utilisatrice.",
+        "harmonizingTitle": "Harmoniser technologie et inclusion",
+        "harmonizingIntro": "Pour combler l’écart entre la complexité des données et la diversité des publics, nous avons mis en place les principes architecturaux suivants :",
+        "gatewayTitle": "Le portail d’une navigation fluide",
+        "gatewayBody": "Pour celles et ceux qui naviguent dans le monde numérique au clavier, nous avons intégré un raccourci « Passer au contenu principal ». Il permet de contourner les éléments de navigation répétés et d’accéder immédiatement au récit et aux données.",
+        "semanticTitle": "Résonance sémantique (ARIA & i18n)",
+        "semanticBody": "Chaque élément interactif – du mouvement de la baguette aux filtres de données – est enrichi d’attributs ARIA descriptifs. Ces libellés sont entièrement localisés en anglais, en français et en arabe, afin que les lecteurs d’écran restituent l’âme du site dans la langue de la personne utilisatrice.",
+        "visualTitle": "Équité visuelle et clarté chromatique",
+        "visualBody": "Nous avons conçu une palette à fort contraste, dans laquelle chaque mot se détache nettement sur le fond. Avec un ratio de contraste supérieur à 4,5:1, le texte reste lisible pour les personnes malvoyantes ou celles consultant le site dans des conditions lumineuses difficiles.",
+        "svgTitle": "Une toile descriptive (accessibilité SVG)",
+        "svgBody": "Conscients qu’un graphique radial peut rester « silencieux » pour certains publics, nos visualisations D3.js sont enrichies de balises <title> et <desc> traduisibles. Elles transforment la géométrie visuelle en description sonore, détaillant les tendances et trajectoires des cheffes d’orchestre.",
+        "tableTitle": "Récits alternatifs (le tableau de données)",
+        "tableBody": "Nous croyons en la multiplicité des chemins vers la vérité. Pour les personnes qui préfèrent le texte structuré aux visuels interactifs, notre DataTable complète sert d’alternative robuste et compatible avec les lecteurs d’écran, afin que la matière brute de l’histoire reste accessible à toutes et tous.",
+        "livingTitle": "Une norme vivante",
+        "livingBody1": "L’accessibilité n’est pas une destination, mais un voyage continu de raffinement. À mesure que nous révélons les notes oubliées de l’histoire de Broadway, nous restons déterminées à faire évoluer notre plateforme pour répondre aux plus hauts standards de conception universelle.",
+        "livingBody2": "Si vous rencontrez la moindre dissonance dans votre expérience, nous vous invitons à nous faire part de vos retours : ils nous aideront à parfaire cette symphonie numérique pour chaque audience."
+      },
+      "orchestralHarmony": {
+        "title": "Orchestral Harmony : lire le nombre de Maestras par spectacle",
+        "paragraph1": "Le graphique Orchestral Harmony traite chaque production de Broadway comme un instrument sur une scène partagée. Plutôt que d’utiliser des barres ou des colonnes, la visualisation encode le volume des crédits de direction Women+ à l’aide d’un petit orchestre d’icônes : piano à queue, cordes, cuivres et bois. L’objectif est de laisser l’œil lire la densité comme il lirait une partition : en un coup d’œil, sans renoncer à la précision.",
+        "paragraph2": "Cet encodage est volontairement discret. Les spectacles comptant dix crédits de Maestra ou plus accèdent au niveau du piano à queue — l’ancre visuelle de l’ensemble. Ceux comptant cinq à neuf crédits sont rendus sous forme de cordes, deux à quatre crédits sous forme de cuivres, et une seule apparition sous forme d’instrument à vent. Cette hiérarchisation maintient la légende légère sur le plan cognitif, tout en faisant émerger les valeurs atypiques et les motifs dans la longue traîne.",
+        "paragraph3": "Pour éviter d’écraser les données dans une seule icône, chaque instrument est associé à un bouquet de baguettes de direction. Chaque baguette représente un crédit de direction Women+ enregistré pour ce spectacle, avec un indicateur de dépassement (+n) lorsque le nombre dépasse la capacité visuelle. Les lecteurs d’écran reçoivent un récit parallèle via les attributs ARIA : au lieu d’un simple « image de piano », ils annoncent par exemple « Représentation élevée : icône de piano à queue indiquant 16 cheffes d’orchestre pour le spectacle Six ». Le graphique se comporte ainsi comme une métaphore musicale, tout en conservant le langage précis des comptes, des niveaux et des spectacles."
+      },
+      "backstageTechnicals": {
+        "title": "Coulisses techniques : comment l’archive se signale",
+        "intro": "Sous la mise en scène, l’archive parle un langage technique précis aux moteurs de recherche et aux technologies d’assistance. Le site est une application React monopage, mais il ne se comporte pas comme une boîte noire : titres, descriptions et métadonnées du jeu de données sont rédigés explicitement afin que ce travail puisse être découvert, cité et reconnu comme source fiable.",
+        "jsonldTitle": "Schéma JSON-LD de type Dataset",
+        "jsonldBody": "L’archive se présente comme un Dataset via un JSON-LD Schema.org injecté dans l’en-tête du document. Elle déclare sa couverture temporelle (1915–2025), le nombre d’enregistrements (385 productions) et l’attribution à la fois à la conservatrice du jeu de données et à l’autrice de la visualisation. Les moteurs de recherche peuvent ainsi traiter ce travail comme une ressource historique structurée, et non comme un simple site décoratif.",
+        "metadataTitle": "Métadonnées sensibles à la langue",
+        "metadataBody": "Les titres de document et les balises meta description sont mis à jour dynamiquement lorsque la personne utilisatrice bascule entre l’anglais, le français et l’arabe. Chaque route — Entrée (page d’accueil) et Guide (documentation) — porte son propre récit : une archive interactive sur la vue d’accueil, et un texte méthodologique sur la vue Script. Cela maintient la compatibilité entre l’architecture SPA et les attentes SEO, tout en respectant la voix multilingue du projet.",
+        "socialTitle": "Cartes sociales & logo Data Baton",
+        "socialBody": "Les métadonnées Open Graph et Twitter Card garantissent que, lorsqu’on partage le lien de l’archive, l’aperçu n’est jamais générique. Le logo Data Baton, le titre Maestras of Broadway et une description concise accompagnent l’URL. Le résultat est un artefact partageable qui ressemble à ce qu’il est : une archive minutieusement conservée, prête pour l’analyse, dédiée au leadership musical Women+."
+      },
+      "designPhilosophy": {
+        "title": "Philosophie de design : l’or de Broadway et la Data Baton",
+        "paragraph1": "Le langage visuel de l’archive est volontairement épuré : une palette restreinte d’or de Broadway (#D4AF37) sur un noir de théâtre profond. L’or n’est pas un ornement gratuit ; il est réservé aux éléments structurels — axes, rôles, jalons et points d’ancrage de navigation — afin que l’œil apprenne à le lire comme un signal de hiérarchie et d’emphase.",
+        "paragraph2": "Le logo Data Baton se situe à l’intersection de l’analyse et de la performance. C’est l’outil de la cheffe d’orchestre, transformé en glyphe de données : un rappel que chaque marque à l’écran correspond à une carrière Women+ documentée, et que chaque interaction est une manière de lire une partition historique. Le logo apparaît dans la navigation, en favicon et dans les aperçus sociaux, de sorte que l’archive reste reconnaissable même lorsqu’elle est détachée de son interface complète.",
+        "paragraph3": "La typographie suit le même principe. Une police à empattement porte les éléments narratifs — titres de sections, citations et phrases de cadrage — tandis qu’une sans-serif sobre porte les libellés, les nombres et les contrôles. Le résultat est un contrat discret entre récit et structure : l’interface demeure théâtrale, mais les données n’ont jamais à rivaliser avec la mise en scène."
+      }
+    },
+    "exploreButton": "Explorer les visualisations",
+    "credits": {
+      "title": "Crédits du projet & Attribution des données",
+      "visualizationStrategy": "Stratégie de visualisation & Développement principal",
+      "visualizationStrategyName": "Hafida Belayd (Scientifique des données principale chez Yma Digital)",
+      "dataResearch": "Recherche & Conservation des données",
+      "dataResearchName": "Sariva Goetz",
+      "dataEngineering": "Ingénierie des données initiale",
+      "dataEngineeringName": "Steve Wexler",
+      "originalDataset": "Ensemble de données original",
+      "originalDatasetLink": "Voir l'ensemble de données original",
+      "license": "Licence",
+      "licenseText": "Ce travail est sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).",
+      "dataCleaning": "Méthodologie de nettoyage des données",
+      "dataCleaningDesc": "Les données brutes ont subi un processus de nettoyage rigoureux, incluant la normalisation des rôles, le regroupement chronologique et l'enrichissement des métadonnées, pour assurer la cohérence analytique sur 385 productions."
+    }
+  },
+  "language": {
+    "label": "Langue"
+  },
+  "moreCharts": {
+    "byDecade": "Par décennie",
+    "byRole": "Par rôle"
+  },
+  "hero": {
+    "title": "L'Héritage de la Baguette",
+    "subtitle": "Cheffes d'orchestre à Broadway",
+    "tagline": "Un siècle de direction musicale — Données sélectionnées par Sariva Goetz",
+    "archiveBadge": "Archives de Broadway",
+    "stage1": {
+      "title": "L'HÉRITAGE DE LA BAGUETTE",
+      "subtitleFr": "L'héritage de la baguette",
+      "subtitleAr": "إرث العصا"
+    },
+    "stage2": {
+      "text": "Pendant un siècle, la fosse du chef d'orchestre était un lieu pour les voix cachées.",
+      "hiddenVoices": "voix cachées"
+    },
+    "stage3": {
+      "text": "Puis vint 1915. Linda Bloodgood leva sa baguette, et le silence se brisa.",
+      "year": "1915"
+    },
+    "stage4": {
+      "text": "Aujourd'hui, 103 cheffes d'orchestre dirigent une symphonie de 385 productions.",
+      "watermark": "SYMPHONIE"
+    },
+    "ctaTimeline": "Explorer la chronologie",
+    "ctaChart": "Voir le graphique"
+  }
+}

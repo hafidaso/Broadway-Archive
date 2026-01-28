@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd broadway-viz && npm install && npm run build",
+  "outputDirectory": "broadway-viz/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

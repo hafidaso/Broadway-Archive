@@ -1,0 +1,418 @@
+{
+  "app": {
+    "title": "The Baton's Legacy",
+    "subtitle": "Women+ Conductors on Broadway",
+    "archiveBadge": "Broadway Archive",
+    "tagline": "A Century of Musical Leadership — Data curated by Sariva Goetz",
+    "ctaTimeline": "Explore Timeline",
+    "ctaChart": "View Chart",
+    "skipToMain": "Skip to main content",
+    "scrollProgress": "Page scroll progress",
+    "milestoneHeader": "🎭 HISTORICAL MILESTONE —",
+    "milestoneFirstRecorded": "First recorded production",
+    "milestoneFirstRole": "First {{role}}",
+    "milestoneLongestRunning": "Longest running production",
+    "milestoneShowLabel": "Production:",
+    "milestoneRoleLabel": "Role:",
+    "milestoneConductorLabel": "Conductor:",
+    "milestoneDateLabel": "Date:",
+    "milestonePerformancesLabel": "Performances:",
+    "exploreTitle": "Explore the Data",
+    "exploreSubtitle": "Switch between interactive views or download the dataset.",
+    "viewChart": "Chart",
+    "viewTimeline": "Timeline",
+    "viewTable": "Table",
+    "downloadCsv": "Download CSV",
+    "csvFilename": "broadway_conductors.csv",
+    "scrollToTop": "Scroll to top"
+  },
+  "nav": {
+    "home": "Overture",
+    "about": "Backstage",
+    "highlights": "Spotlights",
+    "stats": "Scores",
+    "explore": "Stage",
+    "documentation": "Script",
+    "menu": "Menu"
+  },
+  "labels": {
+    "conductor": "Conductor",
+    "production": "Production",
+    "decade": "Decade",
+    "role": "Role",
+    "openingDate": "Opening",
+    "photo": "Photo"
+  },
+  "about": {
+    "title": "About This Project",
+    "introLead": "Broadway has a rich history of music and artistry, but until recently, little attention has been given to the representation of",
+    "introHighlight": "female and nonbinary conductors, music directors, and music supervisors",
+    "introTail": "leading in this space.",
+    "introBody": "This visualization brings that story to life through an interactive timeline that celebrates progress and highlights the work still to be done. It documents the presence of women+ conductors on Broadway from the early 20th century to today.",
+    "contestTitle": "Contest Entry",
+    "contestBody": "Created for the",
+    "contestName": "Women+ Conductors on Broadway Data Visualization Contest",
+    "creditsTitle": "Data Credits",
+    "creditsCuratedBy": "Dataset curated by",
+    "creditsVisualizationBy": "Visualization by",
+    "powerStatement": "A voice unheard, now leading the show.",
+    "exploreLegacy": "Explore the Legacy ↓",
+    "conductors": "Conductors",
+    "directors": "Directors",
+    "supervisors": "Supervisors"
+  },
+  "highlights": {
+    "title": "Featured Conductors",
+    "subtitle": "Spotlighting conductors with the most recorded Broadway productions in this dataset.",
+    "featuredShow": "Featured show:",
+    "recordedProductions": "Recorded productions:",
+    "insights": {
+      "topRecorded": "Top Recorded",
+      "historicalPioneer": "Historical Pioneer",
+      "longestSpan": "Longest Span"
+    },
+    "navigation": {
+      "previous": "Previous conductor",
+      "next": "Next conductor"
+    }
+  },
+  "stats": {
+    "title": "By The Numbers",
+    "leadershipRoles": "Leadership Roles",
+    "hierarchyDescription": "Leadership hierarchy and responsibility distribution",
+    "primaryLeadership": "Primary Leadership",
+    "secondaryLeadership": "Secondary Leadership",
+    "supportingRoles": "Supporting Roles",
+    "total": "total",
+    "womenPlusConductors": "Women+ Conductors",
+    "broadwayShows": "Broadway Shows",
+    "decades": "Decades",
+    "totalProductions": "Total Productions",
+    "production": "production",
+    "productions": "productions"
+  },
+  "musicChart": {
+    "title": "Musical Staff Representation",
+    "description": "Each note represents a Broadway production. Streams show each leadership role over time, creating a flowing musical wave.",
+    "filterByRole": "Filter By Role",
+    "searchConductor": "Search Conductor",
+    "allConductors": "All Conductors",
+    "legend": {
+      "standardNote": "Standard note",
+      "hoveredNote": "Hovered note",
+      "roleRows": "Role rows",
+      "yearAxis": "Year axis"
+    },
+    "tipClickNote": "Click a note to see details and photo",
+    "tipDoubleClick": "Double-click chart to zoom in/out",
+    "displaying": "Displaying <1>{{count}}</1> productions",
+    "filteredBy": "Filtered by",
+    "focusMode": "Focus Mode:",
+    "zoomedIn": "Zoomed In",
+    "closeDetails": "Close details",
+    "details": "Details",
+    "noteAria": "Show details for {{conductor}}, {{show}}",
+    "mute": "Mute sound",
+    "unmute": "Unmute sound",
+    "shareMilestone": "Share this milestone",
+    "shareTitle": "Share this milestone",
+    "shareText": "Celebrating a historic Broadway milestone",
+    "activeConductors": "Active Conductors:",
+    "showAll": "Show All",
+    "openingDate": "Opening Date",
+    "conductorRank": "Conductor Rank",
+    "shareImage": {
+      "title": "The Baton's Legacy",
+      "dataBy": "Data by Sariva Goetz",
+      "archive": "Broadway Archive"
+    },
+    "compare": {
+      "selectConductorA": "Select Conductor A",
+      "selectConductorB": "Select Conductor B",
+      "leadershipProfile": "Leadership Profile:",
+      "signatureWork": "Signature Work:",
+      "vs": "VS",
+      "comparisonDashboard": "Comparison Dashboard",
+      "compareLegacies": "Compare conductor legacies side-by-side",
+      "careerTimeline": "Career Timeline:",
+      "totalRecordedProductions": "Total Recorded Productions",
+      "searchPlaceholder": "Search conductor",
+      "selectAnother": "Select another conductor to compare legacies",
+      "chooseToBegin": "Choose a conductor to begin"
+    }
+  },
+  "timeline": {
+    "filterSearch": "Filter & Search",
+    "search": "Search",
+    "searchPlaceholder": "Search conductor or show...",
+    "roleLabel": "Role",
+    "decadeLabel": "Decade",
+    "allRoles": "All Roles",
+    "allDecades": "All Decades",
+    "clearFilters": "Clear Filters",
+    "noFilters": "No filters active",
+    "showing": "Showing",
+    "of": "of",
+    "results": "results",
+    "noResultsTitle": "No results found",
+    "noResultsText": "Try adjusting your filters or search term to explore more of the collection",
+    "resetFilters": "Reset All Filters",
+    "toggleFiltersShow": "Show filters",
+    "toggleFiltersHide": "Hide filters",
+    "searchAria": "Search for conductors or shows",
+    "roleAria": "Filter by role",
+    "decadeAria": "Filter by decade",
+    "unknownDecade": "Unknown",
+    "decadeOption": "{{decade}}s",
+    "decadeHeading": "{{decade}}s"
+  },
+  "dataTable": {
+    "title": "Data Table",
+    "subtitle": "Search by conductor name.",
+    "sortedBy": "Sorted by",
+    "name": "Name",
+    "date": "Date",
+    "searchPlaceholder": "Search conductor...",
+    "searchAria": "Search table",
+    "headers": {
+      "conductor": "Conductor",
+      "role": "Role",
+      "show": "Show",
+      "opening": "Opening",
+      "decade": "Decade"
+    },
+    "unknown": "Unknown",
+    "showing": "Showing {{count}} of {{total}} records."
+  },
+  "cards": {
+    "unknownConductor": "Unknown Conductor",
+    "unknownRole": "Unknown Role",
+    "unknownShow": "Unknown Show",
+    "dateUnknown": "Date unknown",
+    "pioneer": "Pioneer",
+    "pioneerTooltip": "First woman in this role",
+    "portraitAlt": "Portrait of {{name}}",
+    "ariaLabel": "Production: {{production}}, Conductor: {{conductor}}"
+  },
+  "roles": {
+    "Music Supervisor": "Music Supervisor",
+    "Music Director": "Music Director",
+    "Music Director / Conductor": "Music Director / Conductor",
+    "Conductor": "Conductor",
+    "Associate Music Director": "Associate Music Director",
+    "Associate Music Director / Associate Conductor": "Associate Music Director / Associate Conductor",
+    "Associate Conductor": "Associate Conductor",
+    "Assistant Conductor": "Assistant Conductor",
+    "Alternate Conductor": "Alternate Conductor",
+    "Substitute Conductor": "Substitute Conductor",
+    "Assistant Music Director": "Assistant Music Director",
+    "Associate Music Supervisor": "Associate Music Supervisor"
+  },
+  "footer": {
+    "subtitle": "Women+ Conductors on Broadway",
+    "contestEntry": "Data Visualization Contest Entry",
+    "dataCuratedBy": "Dataset curated by {{name}}",
+    "visualizationBy": "Visualization by {{name}}",
+    "copyright": "© 2026 — Created with love and passion and with 🎼 for the Broadway Data Visualization Contest",
+    "documentation": "Documentation",
+    "licenseNote": "This project is shared under a CC BY license. Data curated by Sariva Goetz.",
+    "dataCredit": "Data curated by Sariva Goetz"
+  },
+  "documentation": {
+    "title": "Documentation & Methodology",
+    "subtitle": "Learn about the data, methodology, and how to use this visualization.",
+    "quickNav": "Quick Navigation",
+    "sections": {
+      "overview": "Overview",
+      "dataSource": "Data Source",
+      "howToUse": "How to Use",
+      "methodology": "Methodology"
+    },
+    "overview": {
+      "paragraph1": "This interactive visualization celebrates the contributions of Women+ conductors on Broadway from 1915 to the present day. Through multiple interactive views—including the Orchestral Wave visualization, chronological timeline, and searchable data table we bring to light the stories of 385 productions and the 103 talented conductors who led them.",
+      "paragraph2": "Our mission is to make visible the often-overlooked history of Women+ musical leadership on Broadway, providing transparency about the data sources, methodology, and tools used to create this visualization.",
+      "stats": {
+        "productions": "Productions",
+        "startYear": "Start Year",
+        "conductors": "Conductors"
+      }
+    },
+    "dataSource": {
+      "intro": "This visualization is built on a groundbreaking dataset the first comprehensive collection of its kind documenting Women+ conductors on Broadway. The data represents years of meticulous research and curation.",
+      "curator": "Data Curator",
+      "curatorDesc": "Sariva Goetz meticulously researched and compiled this historic dataset, documenting every known production featuring Women+ conductors on Broadway.",
+      "dataEngineer": "Data Engineer",
+      "dataEngineerDesc": "Steve Wexler processed and structured the raw data, ensuring accuracy and consistency across all 385 production records.",
+      "leadDataScientist": "Lead Data Scientist & Visualization Strategist",
+      "leadDataScientistDesc": "Hafida Belayd architected the interactive platform and data strategy, transforming the raw dataset into a high-performance analytical tool. She designed and developed the visualization system, implemented the Orchestral Wave, engineered the data enrichment pipeline (chronological binning, pioneer flagging, role normalization, metric synthesis), and built the Comparison Dashboard, ensuring analytical accuracy and longitudinal analysis capabilities throughout the application.",
+      "historicNote": "Historic First:",
+      "historicDesc": "This is the first dataset of its kind to comprehensively document Women+ conductors on Broadway, making it a valuable resource for researchers, historians, and Broadway enthusiasts."
+    },
+    "howToUse": {
+      "chart": {
+        "title": "Orchestral Wave Visualization",
+        "tip1": "Click on any note (circle) to see detailed information about that production and conductor.",
+        "tip2": "Use the role filter buttons to highlight specific leadership roles (Music Director, Conductor, etc.).",
+        "tip3": "Select a conductor from the dropdown to focus on their complete career trajectory.",
+        "tip4": "Use the Comparison Dashboard to compare two conductors side-by-side, analyzing their career timelines, total productions, and signature work.",
+        "tip5": "Export the Orchestral Wave as a PNG image for sharing or documentation."
+      },
+      "highlights": {
+        "title": "Featured Conductors Carousel",
+        "tip1": "On mobile devices, swipe through the infinite carousel to explore featured conductors.",
+        "tip2": "Click on any conductor card to filter the Orchestral Wave visualization to their career.",
+        "tip3": "Each card displays insights such as 'Top Recorded', 'Historical Pioneer', or 'Longest Span'."
+      },
+      "interactions": {
+        "title": "Interactive Features",
+        "tip1": "On desktop, experience the animated baton cursor that follows your mouse movement, creating an immersive conducting experience.",
+        "tip2": "The baton animation in the Hero section responds to scroll progress, rotating and glowing as you explore the story."
+      },
+      "timeline": {
+        "title": "Chronological Timeline",
+        "tip1": "Search by conductor name or show title using the search bar at the top.",
+        "tip2": "Filter by role and decade using the dropdown menus to narrow your exploration.",
+        "tip3": "Click on any production card to see more details about that show and conductor."
+      },
+      "table": {
+        "title": "Data Table",
+        "tip1": "Search across all fields (conductor name, show title, role, etc.) using the search input.",
+        "tip2": "Click any column header to sort the data by that field (click again to reverse the order).",
+        "tip3": "Download the complete dataset as a CSV file using the 'Download CSV' button."
+      }
+    },
+    "methodology": {
+      "intro": "This visualization was built using modern web technologies to ensure interactivity, accessibility, and performance across all devices. The data was carefully processed and validated before being integrated into the visualization.",
+      "dataIntegrity": "To ensure the highest standards of data integrity, the enrichment pipeline was validated through iterative cross-referencing with the original archival records curated by Sariva Goetz.",
+      "tech": {
+        "react": "React Framework",
+        "reactDesc": "Built with React 19.2.0 for component-based architecture, ensuring smooth interactions and maintainable code.",
+        "vite": "Vite Build Tool",
+        "viteDesc": "Powered by Vite (Rolldown) for lightning-fast development and optimized production builds with Rust-based bundling.",
+        "framer": "Framer Motion",
+        "framerDesc": "Framer Motion 12.26.2 provides smooth scroll-driven animations, page transitions, and interactive motion effects throughout the application.",
+        "d3": "D3.js Visualization",
+        "d3Desc": "The Orchestral Wave uses D3.js 7.9.0 to map time to angles and roles to spiral lines, creating an intuitive musical staff representation with interactive notes.",
+        "tailwind": "Tailwind CSS",
+        "tailwindDesc": "Styling uses Tailwind CSS 4.1.18 with a custom Broadway-themed color palette (gold and black) for visual consistency and responsive design."
+      },
+      "dataProcessing": {
+        "title": "Data Processing Steps",
+        "step1": "Raw data was collected and curated by Sariva Goetz, documenting 385 productions from 1915 to 2025.",
+        "step2": "Data was processed and structured by Steve Wexler, ensuring consistent formatting and validation.",
+        "step3": "The dataset was cleaned and enriched with additional metadata (decades, pioneer flags, etc.).",
+        "step4": "Data was integrated into the visualization with real-time filtering, sorting, and search capabilities."
+      },
+      "dataEnrichment": {
+        "title": "Data Enrichment & Analytical Encoding",
+        "intro": "To transform the raw dataset into a high-performance analytical tool, a secondary layer of data enrichment was implemented. This process ensured that the visualization could support longitudinal analysis and complex storytelling.",
+        "chronologicalBinning": {
+          "title": "Chronological Binning (Decades)",
+          "desc": "Raw production dates were programmatically categorized into decade buckets (e.g., 1920s, 1930s) to allow for smooth filtering and comparative analysis across a century of Broadway history."
+        },
+        "pioneerFlagging": {
+          "title": "Analytical Pioneer Flagging",
+          "desc": "Specific records were enriched with \"Pioneer Flags\" based on historical significance (e.g., First Woman Music Director). This categorization powers the Featured Conductors logic and provides immediate context for researchers."
+        },
+        "roleNormalization": {
+          "title": "Role Normalization",
+          "desc": "Using specialized scripts, inconsistent leadership role titles from the original archives were normalized and standardized into three core categories: Conductors, Music Directors, and Music Supervisors. This process was vital for ensuring the accuracy of the Orchestral Wave rendering."
+        },
+        "metricSynthesis": {
+          "title": "Metric Synthesis",
+          "desc": "New data fields were calculated for each conductor, including total career span and production count, enabling the real-time functionality of the Comparison Dashboard."
+        },
+        "note": "This analytical encoding distinguishes between raw archival data and enriched insights, ensuring transparency and accuracy in the visualization "
+      },
+      "accessibility": {
+        "title": "Accessibility: A Commitment to Inclusive Storytelling",
+        "intro": "Data is only as powerful as its reach. In chronicling the history of Women+ Conductors on Broadway, we believe that the stories of these pioneers should be accessible to everyone, transcending physical or visual barriers. This project is meticulously crafted to honor the WCAG 2.1 (Level AA) standards, ensuring a seamless and dignified experience for all.",
+        "harmonizingTitle": "Harmonizing Technology & Inclusivity",
+        "harmonizingIntro": "To bridge the gap between complex data and diverse users, we have implemented the following architectural features:",
+        "gatewayTitle": "The Gateway of Seamless Navigation",
+        "gatewayBody": "For those who navigate the digital world via keyboard, we have integrated a \"Skip to Main Content\" utility. This allows users to bypass repetitive navigation and engage immediately with the narrative and data.",
+        "semanticTitle": "Semantic Resonance (ARIA & i18n)",
+        "semanticBody": "Every interactive element—from the baton’s rhythm to the data filters—is enriched with descriptive ARIA labels. These labels are fully localized in English, French, and Arabic, ensuring that screen readers convey the site's soul in the user's native tongue.",
+        "visualTitle": "Visual Equity & Chromatic Clarity",
+        "visualBody": "We have curated a high-contrast palette where every word stands clearly against the void. With a contrast ratio exceeding 4.5:1, the text remains legible for users with low vision or those viewing under challenging environmental conditions.",
+        "svgTitle": "The Descriptive Canvas (SVG Accessibility)",
+        "svgBody": "Recognizing that a radial chart can be a \"silent\" experience for some, our D3.js visualizations are embedded with translatable <title> and <desc> tags. This transforms visual geometry into a descriptive auditory experience, detailing the trends and trajectories of the conductors.",
+        "tableTitle": "Alternative Narratives (The Data Table)",
+        "tableBody": "We believe in providing multiple paths to the truth. For users who prefer structured text over interactive visuals, our comprehensive DataTable serves as a robust, screen-reader-friendly alternative, ensuring the raw history remains accessible to all.",
+        "livingTitle": "A Living Standard",
+        "livingBody1": "Accessibility is not a destination, but a continuous journey of refinement. As we continue to uncover the forgotten notes of Broadway’s history, we remain committed to evolving our platform to meet the highest standards of universal design.",
+        "livingBody2": "If you encounter any discordance in your experience, we invite your feedback as we strive to perfect this digital symphony for every audience."
+      },
+      "orchestralHarmony": {
+        "title": "Orchestral Harmony: Reading the Maestra Count by Show",
+        "paragraph1": "The Orchestral Harmony Chart treats each Broadway production as an instrument on a shared stage. Instead of bars or columns, the visualization encodes the volume of Women+ conducting credits with a small orchestra of icons: grand piano, strings, brass, and woodwinds. The goal is to let the eye read density as it would read a score: at a glance, without sacrificing precision.",
+        "paragraph2": "The encoding is deliberately discrete. Shows with ten or more Maestra credits are promoted to the grand piano tier—the visual anchor of the ensemble. Productions with five to nine credits are rendered as strings, two to four credits as brass, and a single appearance as a woodwind. This tiering keeps the legend cognitively light while still surfacing outliers and patterns in the tail.",
+        "paragraph3": "To avoid collapsing the data into a single icon, each instrument is paired with a cluster of baton glyphs. Every baton represents one recorded Women+ conducting credit for that show, with an overflow indicator (+n) when counts exceed the visual cap. Screen readers receive a parallel narrative via ARIA labels: instead of “piano image,” they announce, for example, “High representation: grand piano icon indicating 16 conductors for the show Six.” The result is a chart that behaves like a musical metaphor, but still speaks the precise language of counts, tiers, and shows."
+      },
+      "backstageTechnicals": {
+        "title": "Backstage Technicals: How the Archive Signals Itself",
+        "intro": "Beneath the stagecraft, the archive speaks a precise technical language to search engines and assistive technologies. The site is a single-page React application, but it does not behave like a black box: titles, descriptions, and dataset metadata are authored explicitly so that the work can be discovered, cited, and trusted.",
+        "jsonldTitle": "JSON-LD Dataset Schema",
+        "jsonldBody": "The archive announces itself as a Dataset via Schema.org JSON-LD injected into the document head. It declares temporal coverage (1915–2025), the number of records (385 productions), and attribution to both the original dataset curator and the visualization author. This allows search engines to treat the work as a structured historical resource, not just a decorative website.",
+        "metadataTitle": "Language-Aware Metadata",
+        "metadataBody": "Document titles and meta descriptions are updated dynamically when the visitor switches between English, French, and Arabic. Each route—Overture (home) and Script (documentation)—sets its own narrative: an interactive archive on the landing view, and a methodological guide on the Script view. This keeps the SPA architecture compatible with SEO expectations while respecting the multilingual voice of the project.",
+        "socialTitle": "Social Cards & The Data Baton",
+        "socialBody": "Open Graph and Twitter Card metadata ensure that when the archive link is shared, the preview is not generic. The Data Baton logo, the Maestras of Broadway title, and a concise description travel with the URL. The result is a shareable artifact that looks like what it is: a carefully curated, analysis-ready archive of Women+ musical leadership."
+      },
+      "designPhilosophy": {
+        "title": "Design Philosophy: Broadway Gold and the Data Baton",
+        "paragraph1": "The visual language of the archive is intentionally spare: a narrow palette of Broadway gold (#D4AF37) against deep theatre black. Gold is not used as a decorative flourish; it is reserved for structural elements—axes, roles, milestones, and navigation anchors—so that the eye learns to treat it as a signal of hierarchy and emphasis.",
+        "paragraph2": "The Data Baton logo sits at the intersection of analysis and performance. It is a conductor’s tool rendered as a data glyph: a reminder that every mark on the screen corresponds to a documented Women+ career, and that every interaction is a form of reading an historical score. The logo appears in the navigation, the favicon, and social previews so that the archive is recognizable even when detached from its full interface.",
+        "paragraph3": "Typography follows the same principle. A serif face carries the narrative elements—section titles, quotes, and framing sentences—while a clean sans-serif carries labels, counts, and controls. The result is a quiet contract between story and structure: the interface remains theatrical, but the data never has to compete with the staging."
+      }
+    },
+    "exploreButton": "Explore the Visualizations",
+    "credits": {
+      "title": "Project Credits & Data Attribution",
+      "visualizationStrategy": "Visualization Strategy & Lead Development",
+      "visualizationStrategyName": "Hafida Belayd (Lead Data Scientist at Yma Digital)",
+      "dataResearch": "Data Research & Curation",
+      "dataResearchName": "Sariva Goetz",
+      "dataEngineering": "Initial Data Engineering",
+      "dataEngineeringName": "Steve Wexler",
+      "originalDataset": "Original Dataset",
+      "originalDatasetLink": "View Original Dataset",
+      "license": "License",
+      "licenseText": "This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0).",
+      "dataCleaning": "Data Cleaning Methodology",
+      "dataCleaningDesc": "The raw data underwent a rigorous cleaning process, including role normalization, chronological binning, and metadata enrichment, to ensure analytical consistency across 385 productions."
+    }
+  },
+  "language": {
+    "label": "Language"
+  },
+  "moreCharts": {
+    "byDecade": "By Decade",
+    "byRole": "By Role"
+  },
+  "hero": {
+    "title": "The Baton's Legacy",
+    "subtitle": "Women+ Conductors on Broadway",
+    "tagline": "A Century of Musical Leadership — Data curated by Sariva Goetz",
+    "archiveBadge": "Broadway Archive",
+    "stage1": {
+      "title": "THE BATON'S LEGACY",
+      "subtitleFr": "L'héritage de la baguette",
+      "subtitleAr": "إرث العصا"
+    },
+    "stage2": {
+      "text": "For a century, the conductor's pit was a place for hidden voices.",
+      "hiddenVoices": "hidden voices"
+    },
+    "stage3": {
+      "text": "Then came 1915. Linda Bloodgood raised her baton, and the silence broke.",
+      "year": "1915"
+    },
+    "stage4": {
+      "text": "Today, 103 women+ conductors lead a symphony of 385 productions.",
+      "watermark": "SYMPHONY"
+    },
+    "ctaTimeline": "Explore Timeline",
+    "ctaChart": "View Chart"
+  }
+}

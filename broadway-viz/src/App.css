@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap');
+
+body {
+  background-color: var(--theatre-black, #0a0a0a);
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+  --marquee-height: 44px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #000000, #0a0a0a);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-arabic {
+  font-family: 'Amiri', serif;
+}
+
+/* RTL Support */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+  /* Use Amiri for Arabic interface */
+  font-family: 'Amiri', -apple-system, BlinkMacSystemFont, 'Segoe UI', serif;
+}
+
+/* RTL text alignment */
+html[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .text-right {
+  text-align: left !important;
+}
+
+html[dir="rtl"] .text-center {
+  text-align: center;
+}
+
+/* RTL margin utilities */
+html[dir="rtl"] .ml-2,
+html[dir="rtl"] .ml-4,
+html[dir="rtl"] .ml-6,
+html[dir="rtl"] .ml-8,
+html[dir="rtl"] .ml-auto {
+  margin-left: 0;
+}
+
+html[dir="rtl"] .mr-2,
+html[dir="rtl"] .mr-4,
+html[dir="rtl"] .mr-6,
+html[dir="rtl"] .mr-8,
+html[dir="rtl"] .mr-auto {
+  margin-right: 0;
+}
+
+/* RTL padding utilities */
+html[dir="rtl"] .pl-2,
+html[dir="rtl"] .pl-4,
+html[dir="rtl"] .pl-6,
+html[dir="rtl"] .pl-8 {
+  padding-left: 0;
+}
+
+html[dir="rtl"] .pr-2,
+html[dir="rtl"] .pr-4,
+html[dir="rtl"] .pr-6,
+html[dir="rtl"] .pr-8 {
+  padding-right: 0;
+}
+
+/* RTL flex direction */
+html[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* RTL navigation menu */
+html[dir="rtl"] .left-0 {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .right-0 {
+  right: auto;
+  left: 0;
+}
+
+/* RTL mobile menu animation */
+html[dir="rtl"] [class*="x: '100%'"] {
+  transform: translateX(-100%);
+}
+
+/* RTL arrow icons */
+html[dir="rtl"] .arrow-right::before {
+  content: '←';
+}
+
+html[dir="rtl"] .arrow-left::before {
+  content: '→';
+}
+
+/* Remove default list styling */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Better spacing for paragraphs and sections */
+p + p {
+  margin-top: 1rem;
+}
+
+section + section {
+  margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes mesh-drift {
+  0% {
+    transform: translate3d(-2%, -2%, 0) scale(1);
+    background-position: 0% 50%;
+  }
+  50% {
+    transform: translate3d(2%, 1%, 0) scale(1.05);
+    background-position: 100% 50%;
+  }
+  100% {
+    transform: translate3d(-2%, -2%, 0) scale(1);
+    background-position: 0% 50%;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(212, 175, 55, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+.golden-mesh-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.golden-mesh-card::before {
+  content: "";
+  position: absolute;
+  inset: -35%;
+  background:
+    radial-gradient(60% 60% at 20% 30%, rgba(212, 175, 55, 0.18), transparent 60%),
+    radial-gradient(55% 55% at 80% 20%, rgba(255, 215, 130, 0.12), transparent 55%),
+    radial-gradient(70% 70% at 60% 80%, rgba(212, 175, 55, 0.1), transparent 60%),
+    radial-gradient(45% 45% at 15% 75%, rgba(255, 236, 180, 0.08), transparent 55%);
+  opacity: 0.7;
+  filter: blur(18px);
+  animation: mesh-drift 18s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.role-label {
+  text-transform: capitalize;
+}
+
+/* Focus styles for accessibility */
+input:focus,
+select:focus,
+button:focus,
+a:focus {
+  outline: 3px solid var(--broadway-gold, #D4AF37);
+  outline-offset: 2px;
+}
+
+/* Skip to main content link for accessibility */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #D4AF37;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .App {
+    border: 2px solid #D4AF37;
+  }
+  
+  button,
+  input,
+  select {
+    border: 2px solid #D4AF37 !important;
+  }
+}
+
+/* Custom selection colors */
+::selection {
+  background-color: #D4AF37;
+  color: #000;
+}
+
+::-moz-selection {
+  background-color: #D4AF37;
+  color: #000;
+}
+
+/* Smooth focus transitions */
+*:focus-visible {
+  outline: 3px solid #D4AF37;
+  outline-offset: 3px;
+  transition: outline-offset 0.2s ease;
+}
+
+/* Loading state styles */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(55, 65, 81, 0.5) 25%,
+    rgba(75, 85, 99, 0.5) 50%,
+    rgba(55, 65, 81, 0.5) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Improve button and interactive element cursor */
+button,
+a,
+[role="button"],
+[tabindex="0"] {
+  cursor: pointer;
+}
+
+/* Shared CTA button styles (matches hero buttons) */
+.cta-button {
+  background-color: #D4AF37;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-radius: 0;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.cta-button:hover {
+  background-color: #FDF4C0;
+}
+
+.cta-button-outline {
+  background-color: transparent;
+  color: #D4AF37;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-radius: 0;
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+}
+
+.cta-button-outline:hover {
+  background-color: rgba(212, 175, 55, 0.05);
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+/* Shared button hover glow */
+.button-glow {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.button-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.35);
+}
+
+/* Ensure proper text contrast */
+.text-contrast-high {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Ticker band */
+.ticker-band {
+  position: relative;
+}
+
+.marquee-bar {
+  height: var(--marquee-height);
+}
+
+.marquee-bar .ticker-band {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+}
+
+.ticker-content {
+  display: inline-flex;
+  gap: 4rem;
+  padding: 0.6rem 0;
+  animation: ticker-scroll 18s linear infinite;
+}
+
+.ticker-band:hover .ticker-content {
+  animation-duration: 28s;
+}
+
+.ticker-text {
+  font-family: 'Playfair Display', serif;
+  color: #0f0f0f;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* About section background image with mobile positioning */
+.about-bg-image {
+  background-position: center;
+}
+
+/* On mobile, adjust background position to keep conductor's hand and baton visible */
+@media (max-width: 768px) {
+  .about-bg-image {
+    background-position: center 30%;
+    /* Remove fixed attachment on mobile for better performance */
+    background-attachment: scroll;
+  }
+}
+
+
+
