@@ -32,7 +32,7 @@
     "highlights": "Spotlights",
     "stats": "Scores",
     "explore": "Stage",
-    "documentation": "Script",
+    "documentation": "Guide",
     "menu": "Menu"
   },
   "labels": {
@@ -356,7 +356,7 @@
         "jsonldTitle": "JSON-LD Dataset Schema",
         "jsonldBody": "The archive announces itself as a Dataset via Schema.org JSON-LD injected into the document head. It declares temporal coverage (1915–2025), the number of records (385 productions), and attribution to both the original dataset curator and the visualization author. This allows search engines to treat the work as a structured historical resource, not just a decorative website.",
         "metadataTitle": "Language-Aware Metadata",
-        "metadataBody": "Document titles and meta descriptions are updated dynamically when the visitor switches between English, French, and Arabic. Each route Overture (home) and Script (documentation)—sets its own narrative: an interactive archive on the landing view, and a methodological guide on the Script view. This keeps the SPA architecture compatible with SEO expectations while respecting the multilingual voice of the project.",
+        "metadataBody": "Document titles and meta descriptions are updated dynamically when the visitor switches between English, French, and Arabic. Each route Overture (home) and Guide (documentation)—sets its own narrative: an interactive archive on the landing view, and a methodological guide on the Guide view. This keeps the SPA architecture compatible with SEO expectations while respecting the multilingual voice of the project.",
         "socialTitle": "Social Cards & The Data Baton",
         "socialBody": "Open Graph and Twitter Card metadata ensure that when the archive link is shared, the preview is not generic. The Data Baton logo, the Maestras of Broadway title, and a concise description travel with the URL. The result is a shareable artifact that looks like what it is: a carefully curated, analysis-ready archive of Women+ musical leadership."
       },
